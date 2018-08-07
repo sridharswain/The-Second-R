@@ -1,0 +1,3 @@
+rootProject.name = 'thesecondr'
+
+include ':app'
