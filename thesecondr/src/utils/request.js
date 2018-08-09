@@ -1,10 +1,13 @@
-serverLink = "192.168.43.151:8080"
-get = (link,body)=>{
+const serverLink = "http://192.168.43.151:8080";
+const get = (link,body)=>{
+    fetch(serverLink+link)
+    .then((res)=>{
+        console.log(res);
+    });
+};
 
-}
-
-post = (link,body)=>{
-    fetch(server+link,{
+const post = (link,body)=>{
+    return fetch(serverLink+link,{
         method : 'POST',
         headers : {
             Accept : 'application/json',
@@ -14,6 +17,7 @@ post = (link,body)=>{
     })
     .then((res)=>{
         console.log(res);
+        return res;
     });
 }
 
