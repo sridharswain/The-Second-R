@@ -1,5 +1,6 @@
 import React,{Component} from 'react';
 import {View,Text,Image,Animated} from 'react-native';
+import {Actions} from 'react-native-router-flux';
 import Button from '../components/Button';
 import Styles from '../res/styles';
 
@@ -35,6 +36,11 @@ export default class Splash extends Component{
         })
     }
 
+    onLoginPress = () =>{
+        console.log("Clocked");
+        Actions.login();
+    }
+
     render(){
         return(
             <View style={{flex:1}}>
@@ -56,7 +62,8 @@ export default class Splash extends Component{
                         <Image source = {require("../res/images/facebook.png")} style={Styles.socialIcons}/>
                     </View>
                 
-                    <Button text="Login/Register with email instead."/>
+                    <Button text="Login/Register with email instead."
+                    onPress={this.onLoginPress}/>
 
                 </Animated.View>
 
