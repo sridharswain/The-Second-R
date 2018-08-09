@@ -1,5 +1,6 @@
 import React,{Component} from 'react';
 import {View,Dimensions,Image,Text} from 'react-native';
+import {Actions} from 'react-native-router-flux';
 import Styles from '../res/styles';
 import TextInput from '../components/TextInput';
 import Button from '../components/Button';
@@ -9,12 +10,17 @@ export default class Login extends Component{
     constructor(props){
         super(props);
         this.state = {
-            width : 0
+            width : 0,
+            currentPage : 2,
         }
     }
     
     componentDidMount(){
         this.setState({width : Dimensions.get('window').width});
+    }
+
+    onRegisterPress = () => {
+        Actions.register();
     }
 
     render(){
@@ -44,7 +50,7 @@ export default class Login extends Component{
 
                 <View style={{flexDirection : 'row',justifyContent:'center'}}>
                     <Button text="Forgot Password?" style={{width : this.state.width/2}}/>
-                    <Button text="Register" style={{width : this.state.width/2}}/>
+                    <Button text="Register" style={{width : this.state.width/2}} onPress={this.onRegisterPress}/>
                 </View>
             </View>
         );
