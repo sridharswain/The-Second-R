@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="/home/sid/.gradle/caches/modules-2/files-2.1/com.parse.bolts/bolts-tasks/1.4.0/d85884acf6810a3bbbecb587f239005cbc846dc4/bolts-tasks-1.4.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.3"
+        sha1="d85884acf6810a3bbbecb587f239005cbc846dc4">
+        <dex dex="/home/sid/Projects/The-Second-R/thesecondr/android/app/build/intermediates/pre-dexed/debug/bolts-tasks-1.4.0_60b41717a06e4c83141388e71da32a5cb2b27080.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/sid/.android/build-cache/20f4d81f5da2ad884f245590cbf1c2e8166de407/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.3"
+        sha1="9803a14716e9f462afb5742811f3456c39f3be3a">
+        <dex dex="/home/sid/Projects/The-Second-R/thesecondr/android/app/build/intermediates/pre-dexed/debug/classes_8b545c2fed74ccae290065770d7def819081fdba.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/sid/.android/build-cache/2f3487383c8fc55f08d02a819466c2ccb4cea7e5/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.3"
+        sha1="40392f30a601db5675cdf18192aab013d6fee6ec">
+        <dex dex="/home/sid/Projects/The-Second-R/thesecondr/android/app/build/intermediates/pre-dexed/debug/classes_aa7099f4fbcf93625485f81e9db6e1b870df4fbe.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/sid/.android/build-cache/fa8551cc34512100d083b4a7ace3971a7565b5f4/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.3"
+        sha1="87382214d92be4e3c931cb6aa7aa4e827bc179b7">
+        <dex dex="/home/sid/Projects/The-Second-R/thesecondr/android/app/build/intermediates/pre-dexed/debug/classes_b314d27c38335c43e76cdab12e9baf7854149fdc.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/sid/.android/build-cache/4ee14ebf1b830099a147cb7ea95720987b4366bf/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.3"
+        sha1="e7a850c25a7efbd533c496ab482c980fdafac58d">
+        <dex dex="/home/sid/Projects/The-Second-R/thesecondr/android/app/build/intermediates/pre-dexed/debug/classes_60a89defc6f6a7be63ee1be58236dfbcd823d82a.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/sid/.android/build-cache/68dcab110b4a9ef91a8fb2dda4765e6c8bd13926/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.3"
+        sha1="b62fdc4cfef174c1e456014195c83fa7de7dc041">
+        <dex dex="/home/sid/Projects/The-Second-R/thesecondr/android/app/build/intermediates/pre-dexed/debug/classes_3a3e41abb063f6502837ba150f5979fcd3cc86a3.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/sid/.gradle/caches/modules-2/files-2.1/android.arch.core/common/1.0.0/a2d487452376193fc8c103dd2b9bd5f2b1b44563/common-1.0.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.3"
+        sha1="a2d487452376193fc8c103dd2b9bd5f2b1b44563">
+        <dex dex="/home/sid/Projects/The-Second-R/thesecondr/android/app/build/intermediates/pre-dexed/debug/common-1.0.0_3fc014aec1169be23e4a20d63f4af83da8dbdb07.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/sid/.android/build-cache/19a7ca3c3420cf12a4bd5dd682c3429b7f174f3d/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.3"
+        sha1="1c9837ec75b2273699379c2ba0ae63d669b4f08c">
+        <dex dex="/home/sid/Projects/The-Second-R/thesecondr/android/app/build/intermediates/pre-dexed/debug/classes_5c1efbc0f9bdeda9d366c45af09e9e3708a52266.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/sid/.android/build-cache/6c593bb547de2ed7cf476399d439443227abca83/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.3"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="/home/sid/Projects/The-Second-R/thesecondr/android/app/build/intermediates/pre-dexed/debug/classes_1922738d2ffb8e525e3ba4157fab3df9bcc1917e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/sid/.android/build-cache/4ee14ebf1b830099a147cb7ea95720987b4366bf/output/jars/libs/infer-annotations-4.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.3"
+        sha1="9809e90be788acdb479b2b44e2112f3295a03068">
+        <dex dex="/home/sid/Projects/The-Second-R/thesecondr/android/app/build/intermediates/pre-dexed/debug/infer-annotations-4.0_487889db33836268b63a97121949d7a9fedf043f.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/sid/.android/build-cache/f8874f2e44247bf74113eac69a8c41458721a88e/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.3"
+        sha1="233f60a165ae622c8b36731502ebbda0f65e1930">
+        <dex dex="/home/sid/Projects/The-Second-R/thesecondr/android/app/build/intermediates/pre-dexed/debug/classes_0a12a7c63ef7a4f7aedf035f67013db83d76b38a.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/sid/.android/build-cache/1a0803df61e6bb95de02dc964331e3467eace79e/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.3"
+        sha1="da59c80e4a1c8df62d2b4188ef3efddab8afa236">
+        <dex dex="/home/sid/Projects/The-Second-R/thesecondr/android/app/build/intermediates/pre-dexed/debug/classes_9454aa3f57e54172be822983d70ee09211ddf5ed.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/sid/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp/3.10.0/7ef0f1d95bf4c0b3ba30bbae25e0e562b05cf75e/okhttp-3.10.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.3"
+        sha1="7ef0f1d95bf4c0b3ba30bbae25e0e562b05cf75e">
+        <dex dex="/home/sid/Projects/The-Second-R/thesecondr/android/app/build/intermediates/pre-dexed/debug/okhttp-3.10.0_a1df22d9c597ea393d68f37461fc2ac18c710885.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/sid/.android/build-cache/14ac2723da03b18bc11644c16e000bb69ecc886f/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.3"
+        sha1="dc6c0959ecc7b21932675183573b2bcecf2687b9">
+        <dex dex="/home/sid/Projects/The-Second-R/thesecondr/android/app/build/intermediates/pre-dexed/debug/classes_03fe9b224eb9a5359500588ef94e3ff6ae615db2.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/sid/.gradle/caches/modules-2/files-2.1/com.squareup.okio/okio/1.14.0/102d7be47241d781ef95f1581d414b0943053130/okio-1.14.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.3"
+        sha1="102d7be47241d781ef95f1581d414b0943053130">
+        <dex dex="/home/sid/Projects/The-Second-R/thesecondr/android/app/build/intermediates/pre-dexed/debug/okio-1.14.0_bc2514e8b205f7bcc6749db9e00747fc7e41c742.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/sid/.android/build-cache/dde9aea9de1e4bc219d35e4ebb1285f1bcb82c22/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.3"
+        sha1="f97cf85b0fe70d37a705111dafa6b1b418ea1650">
+        <dex dex="/home/sid/Projects/The-Second-R/thesecondr/android/app/build/intermediates/pre-dexed/debug/classes_8afa9de8e10c95fc5e492b14072d75e45b8ed39c.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/sid/.android/build-cache/d887be52161bd2f0547e736556715768cae5399b/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.3"
+        sha1="ae15c560bc6685007440d8a70686f8348bafd791">
+        <dex dex="/home/sid/Projects/The-Second-R/thesecondr/android/app/build/intermediates/pre-dexed/debug/classes_1edb95d394c7cbadbfca73ad74a045cc9aeafb67.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/sid/.android/build-cache/3dbc18c0e2284cc2dc1fe02fcd540a5523b91f00/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.3"
+        sha1="f428e2fbc9ed0b297e3a3f420e51e6982f66822d">
+        <dex dex="/home/sid/Projects/The-Second-R/thesecondr/android/app/build/intermediates/pre-dexed/debug/classes_d12dba823c7f9fa1d98e3af71f5349c73cb0109b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/sid/.gradle/caches/modules-2/files-2.1/com.android.support/support-annotations/26.1.0/814258103cf26a15fcc26ecce35f5b7d24b73f8/support-annotations-26.1.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.3"
+        sha1="0814258103cf26a15fcc26ecce35f5b7d24b73f8">
+        <dex dex="/home/sid/Projects/The-Second-R/thesecondr/android/app/build/intermediates/pre-dexed/debug/support-annotations-26.1.0_d9aaad663e08d7d024b555f89eb0b3053f37218b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/sid/.gradle/caches/modules-2/files-2.1/android.arch.lifecycle/common/1.0.0/e414a4cb28434e25c4f6aa71426eb20cf4874ae9/common-1.0.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.3"
+        sha1="e414a4cb28434e25c4f6aa71426eb20cf4874ae9">
+        <dex dex="/home/sid/Projects/The-Second-R/thesecondr/android/app/build/intermediates/pre-dexed/debug/common-1.0.0_be5e431a832a3d7c5fb9b4256ed83daf129e740a.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/sid/.android/build-cache/6cb0b71914433e007ffabcd9f1b0e97eb7bc3087/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.3"
+        sha1="2442771a5590dd4eb4bce00c2e9dca9e22e4c963">
+        <dex dex="/home/sid/Projects/The-Second-R/thesecondr/android/app/build/intermediates/pre-dexed/debug/classes_0fe306f26049c9dcd393a6c74ee64bfc72bdaa02.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/sid/.android/build-cache/bdaa9e11ff41839cb08f0dd5e77312592f745831/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.3"
+        sha1="508f50705b4fde51a16259f29c854201a3044516">
+        <dex dex="/home/sid/Projects/The-Second-R/thesecondr/android/app/build/intermediates/pre-dexed/debug/classes_d96b4f1e4ed929b51a168aa40a34f455a5531fa3.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/sid/.android/build-cache/0d193450cb6deaf6acb884bb4dd523a6acf56c06/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.3"
+        sha1="6f4138a4e065826cb044d49faea4cfd7191773d1">
+        <dex dex="/home/sid/Projects/The-Second-R/thesecondr/android/app/build/intermediates/pre-dexed/debug/classes_d2601e7cef3685d8de30ea406e936867e75f46a2.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/sid/.android/build-cache/88beebbb67374733eda9ff646d7aa7da99c4f8dd/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.3"
+        sha1="f90b593491e4044903f0bbf68dc3fa2790b151b9">
+        <dex dex="/home/sid/Projects/The-Second-R/thesecondr/android/app/build/intermediates/pre-dexed/debug/classes_69c8db04778173f46f8c1393eb59c6449bf9399d.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/sid/.gradle/caches/modules-2/files-2.1/com.facebook.fbui.textlayoutbuilder/staticlayout-proxy/1.0/f162442a19fff13995fbd51ba414d9ee05579080/staticlayout-proxy-1.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.3"
+        sha1="f162442a19fff13995fbd51ba414d9ee05579080">
+        <dex dex="/home/sid/Projects/The-Second-R/thesecondr/android/app/build/intermediates/pre-dexed/debug/staticlayout-proxy-1.0_1f8ceff0954735efe47b96649f41c8a856bf26bb.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/sid/.android/build-cache/79d747274f78b216ff4fcf31b237391fdc71663f/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.3"
+        sha1="7efef32744ca4a436492d5cf28c08698cc2af256">
+        <dex dex="/home/sid/Projects/The-Second-R/thesecondr/android/app/build/intermediates/pre-dexed/debug/classes_800aa570bee1e283f7da1974fb1adf71686506f5.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/sid/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp-urlconnection/3.10.0/ec614c05825ddd2267677a99f585d3913474b125/okhttp-urlconnection-3.10.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.3"
+        sha1="ec614c05825ddd2267677a99f585d3913474b125">
+        <dex dex="/home/sid/Projects/The-Second-R/thesecondr/android/app/build/intermediates/pre-dexed/debug/okhttp-urlconnection-3.10.0_c043533384b789bb2681e7fe7216b1a8cb9ac848.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/sid/.gradle/caches/modules-2/files-2.1/com.google.code.findbugs/jsr305/3.0.0/5871fb60dc68d67da54a663c3fd636a10a532948/jsr305-3.0.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.3"
+        sha1="5871fb60dc68d67da54a663c3fd636a10a532948">
+        <dex dex="/home/sid/Projects/The-Second-R/thesecondr/android/app/build/intermediates/pre-dexed/debug/jsr305-3.0.0_b0c5914462a661731eba74e15bac359a22e4577b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/sid/.android/build-cache/25ebbecbafc27805db3b0e64333a09f4f0d5dc51/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.3"
+        sha1="f80a752d1333efd4fb9b87da63e73909acb151af">
+        <dex dex="/home/sid/Projects/The-Second-R/thesecondr/android/app/build/intermediates/pre-dexed/debug/classes_2d608318789bf95396d411a2719739b3fad2d696.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/sid/.gradle/caches/modules-2/files-2.1/javax.inject/javax.inject/1/6975da39a7040257bd51d21a231b76c915872d38/javax.inject-1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.3"
+        sha1="6975da39a7040257bd51d21a231b76c915872d38">
+        <dex dex="/home/sid/Projects/The-Second-R/thesecondr/android/app/build/intermediates/pre-dexed/debug/javax.inject-1_88c882a52a2315316323eefc70df57302cd313ce.jar" />
+    </item>
+
+</items>

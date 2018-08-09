@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="com.facebook.fresco:fbcore-1.9.0">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.android/build-cache/d887be52161bd2f0547e736556715768cae5399b/output/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.android/build-cache/d887be52161bd2f0547e736556715768cae5399b/output/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

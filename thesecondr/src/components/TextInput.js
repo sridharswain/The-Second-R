@@ -12,7 +12,8 @@ export default class TextInput extends Component{
                     style={styles.inputText}
                     onChangeText={this.props.onChangeText}
                     placeholder={this.props.placeholder}
-                    secureTextEntry={this.props.password}/>
+                    secureTextEntry={this.props.password}
+                    multiline={this.props.multiline} />
                 
             </View>
         );
@@ -23,7 +24,6 @@ const styles = StyleSheet.create({
     inputText : {
         fontSize : 20,
         width : "70%",
-        height : 50,
     },
 
     container : {
