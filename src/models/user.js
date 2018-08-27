@@ -23,6 +23,5 @@ var userSchema = mongoose.Schema({
         default : []
     }
 });
-//userSchema.index({email : 1, type : -1});
 
 module.exports = mongoose.model("user",userSchema);

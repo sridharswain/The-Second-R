@@ -9,7 +9,7 @@ module.exports = function(data,db,callback){
         password : data.password
     });
 
-    user.save(function(err){
+    user.save((err) => {
         if(err) callback("User Already Exists");
         else callback()
     });
