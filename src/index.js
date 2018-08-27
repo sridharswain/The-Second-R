@@ -13,6 +13,6 @@ const app = express();
 app.use(express.json());
 routes(app,db);
 
-app.listen(8080,() => {
+app.listen(process.env.PORT || 8080,() => {
     console.log("App Started on port 8080");
 })
