@@ -1,7 +1,11 @@
 var mongoose = require("mongoose");
-module.exports = mongoose.model("user",mongoose.Schema({
+var userSchema = mongoose.Schema({
     name : String,
-    email : String,
+    email : {
+        type : String,
+        unique : true,
+        index : true
+    },
     password : String,
     address : String,
     phone : String,
@@ -9,10 +13,16 @@ module.exports = mongoose.model("user",mongoose.Schema({
         type : Date,
         default : Date.now
     },
-    orders : [{
-        id : {
-            type : mongoose.Schema.Types.ObjectId,
-            ref : 'order'
-        }
-    }], 
-}));
+    orders : {
+        type : [{
+            id : {
+                type : mongoose.Schema.Types.ObjectId,
+                ref : 'order'
+            }
+        }],
+        default : []
+    }
+});
+//userSchema.index({email : 1, type : -1});
+
+module.exports = mongoose.model("user",userSchema);

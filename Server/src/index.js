@@ -4,7 +4,7 @@ const routes = require("./routes");
 const firebase = require("./firebase");
 //const db = firebase.init();
 const db = require("mongoose");
-db.connect("mongodb://localhost/thesecondr",function(err){
+db.connect("mongodb://localhost/thesecondrdb",function(err){
     if(err) throw err;
     else console.log("Connected to DB");  
 })
