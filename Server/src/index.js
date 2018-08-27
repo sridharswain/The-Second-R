@@ -7,7 +7,7 @@ const db = require("mongoose");
 db.connect("mongodb://localhost/thesecondrdb",function(err){
     if(err) throw err;
     else console.log("Connected to DB");  
-})
+});
 
 const app = express();
 app.use(express.json());
