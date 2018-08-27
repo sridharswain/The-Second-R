@@ -4,7 +4,8 @@ const routes = require("./routes");
 const firebase = require("./firebase");
 //const db = firebase.init();
 const db = require("mongoose");
-db.connect("mongodb://localhost/thesecondrdb",function(err){
+//mongodb://localhost/thesecondrdb
+db.connect("mongodb://admin:Sid25081998!@ds235352.mlab.com:35352/heroku_jcldcxq5",function(err){
     if(err) console.log(err)
     else console.log("Connected to DB");  
 });
