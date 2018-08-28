@@ -1,8 +1,10 @@
-const serverLink = "http://192.168.43.151:8080";
+const serverLink = "https://thesecondr.herokuapp.com";
+
 const get = (link,body)=>{
     fetch(serverLink+link)
     .then((res)=>{
         console.log(res);
+        return res;
     });
 };
 
@@ -16,8 +18,7 @@ const post = (link,body)=>{
         body : JSON.stringify(body)
     })
     .then((res)=>{
-        console.log(res);
-        return res;
+        return JSON.parse(res._bodyText);
     });
 }
 

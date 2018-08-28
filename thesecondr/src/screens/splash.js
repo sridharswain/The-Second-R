@@ -3,7 +3,6 @@ import {View,Text,Image,Animated} from 'react-native';
 import {Actions} from 'react-native-router-flux';
 import Button from '../components/Button';
 import Styles from '../res/styles';
-import * as Request from '../utils/request'
 
 export default class Splash extends Component{
 
@@ -14,10 +13,6 @@ export default class Splash extends Component{
             logoFadeValue : new Animated.Value(0),
             loginAnimValue : new Animated.Value(0)
         }
-    }
-
-    componentWillMount(){
-        Request.post('/register',{user:'123',pqaa:12});
     }
 
     /*FADE IN ANIMATOR
