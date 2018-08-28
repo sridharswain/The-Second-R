@@ -1,11 +1,13 @@
 import React,{Component} from 'react';
 import {View,ScrollView,StyleSheet,Dimensions,Image,Text} from 'react-native';
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view'
+import { post } from '../utils/request';
 import StepIndicator from '../components/StepIndicator';
 import TextInput from '../components/TextInput';
 import Button from '../components/Button'
 import Styles from '../res/styles';
 import Toast from '../utils/Toast'
+import { Actions } from 'react-native-router-flux';
 
 
 const isBlank = (str) => {
@@ -14,6 +16,10 @@ const isBlank = (str) => {
 
 const isEmail = (str) => {
     return (/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(str))
+}
+
+const isPhone = (str) => {
+    return (/[2-9]{2}\d{8}$/.test(str));
 }
 
 export default class Register extends Component{
@@ -27,7 +33,8 @@ export default class Register extends Component{
             email : '',
             password : '',
             rePassword : '',
-            address : ''
+            address : '',
+            phone : ''
         }
     }
 
@@ -48,6 +55,35 @@ export default class Register extends Component{
         return isOk;
     }
 
+    correctContactInfo(){
+        const isOk = isPhone(this.state.phone);
+        if(!isOk) Toast.show("Invalid Phone !", Toast.SHORT);
+        return isOk;
+    }
+
+    signUp(){
+        var email = this.state.email;
+        var password = this.state.password;
+        var name = this.state.name;
+        var phone = this.state.phone;
+        var address = this.state.address;
+        post('/signup',{
+            name,
+            email,
+            password,
+            phone,
+            address
+        })
+        .then((response) => {
+            console.log(response);
+            if(response.error) Toast.show(response.result,Toast.SHORT);
+            else{
+                //GO TO LOGIN PAGE CODE GOES HERE
+                Actions.pop();
+            }
+        });
+    }
+
     onContinuePressed = () =>{
         switch(this.state.currentPage){
             case 1:
@@ -56,9 +92,16 @@ export default class Register extends Component{
             case 2:
                 if(!this.correctPasswordInfo()) return;
                 break;
+            case 3:
+                if(!this.correctContactInfo()) return;
+                this.signUp();
+                break;
+
         }
-        this.scrollForm.scrollTo({x: this.state.currentPage*this.state.width, y: 0, animated: true})
-        this.setState({currentPage : this.state.currentPage+1});
+        if(this.state.currentPage <3){
+            this.scrollForm.scrollTo({x: this.state.currentPage*this.state.width, y: 0, animated: true})
+            this.setState({currentPage : this.state.currentPage+1});
+        }
     }
 
     render(){
@@ -108,7 +151,12 @@ export default class Register extends Component{
 
                         <View style={[{width : this.state.width},styles.pageStyle]}>
                             <TextInput
-                                style = {{flex :1}}
+                                leftImage = {require('../res/images/phone.png')}
+                                placeholder = 'Phone'
+                                onChangeText = {(phone) => this.setState({phone})}
+                                multiline/>
+                            <TextInput
+                                style = {{marginTop : 10}}
                                 leftImage = {require('../res/images/route.png')}
                                 placeholder = 'Address'
                                 onChangeText = {(address) => this.setState({address})}
@@ -117,7 +165,7 @@ export default class Register extends Component{
 
                     </ScrollView>
                     
-                    <Button text={(this.state.currentPage!=0)?"Continue":"Sign up"}
+                    <Button text={ ( this.state.currentPage != 3 ) ? "Continue" : "Sign up" }
                             style={{width : 310, borderRadius : 10, marginTop : 15}}
                             onPress={this.onContinuePressed}/>
                     

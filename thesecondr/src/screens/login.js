@@ -31,8 +31,8 @@ export default class Login extends Component{
         var email = this.state.email;
         var password =  this.state.password;
         post('/signin',{
-            email : email,
-            password : password
+            email,
+            password
         })
         .then((res) => {
             if(res.error){
