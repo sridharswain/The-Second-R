@@ -1,11 +1,12 @@
 import React,{Component} from 'react';
-import {View,ScrollView,StyleSheet,Dimensions,Image,Text} from 'react-native';
+import {View,ScrollView,StyleSheet,Dimensions,Image,Text,ActivityIndicator} from 'react-native';
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view'
-import { post } from '../utils/request';
+import { post, get } from '../utils/request';
 import StepIndicator from '../components/StepIndicator';
 import TextInput from '../components/TextInput';
 import Button from '../components/Button'
 import Styles from '../res/styles';
+import Colors from '../res/colors';
 import Toast from '../utils/Toast'
 import { Actions } from 'react-native-router-flux';
 
@@ -34,7 +35,12 @@ export default class Register extends Component{
             password : '',
             rePassword : '',
             address : '',
-            phone : ''
+            phone : '',
+            isEmailChecking : false,
+            emailStatusImage : require('../res/images/cross_red.png'),
+            tick_green : require('../res/images/tick_green.png'),
+            cross_red : require('../res/images/cross_red.png'),
+            isEmailWrong : true
         }
     }
 
@@ -84,7 +90,7 @@ export default class Register extends Component{
         });
     }
 
-    onContinuePressed = () =>{
+    onContinuePressed = () => {
         switch(this.state.currentPage){
             case 1:
                 if(!this.correctPersonalInfo()) return;
@@ -96,12 +102,38 @@ export default class Register extends Component{
                 if(!this.correctContactInfo()) return;
                 this.signUp();
                 break;
-
         }
-        if(this.state.currentPage <3){
+        if(this.state.currentPage < 3){
             this.scrollForm.scrollTo({x: this.state.currentPage*this.state.width, y: 0, animated: true})
             this.setState({currentPage : this.state.currentPage+1});
         }
+    }
+
+    emailCheckImage = () => {
+        if(isBlank(this.state.email)) return null;
+        if(!this.state.isEmailChecking){
+            return (<Image style={styles.emailIndicatorStyle} source={this.state.emailStatusImage}/>);
+        }
+        else{
+            return (<ActivityIndicator style = {styles.emailIndicatorStyle} size="small" color={Colors.green} />);
+        }
+        return null;
+    }
+
+    checkEmailAvailablity = (email) => {
+        this.setState({isEmailChecking : true});
+        get('/checkEmailAvailable',{email})
+        .then((response) => {
+            if(this.state.email == email){
+                this.setState({isEmailChecking : false})
+                if(!isEmail(email) || !response.res) 
+                    this.setState({emailStatusImage : this.state.cross_red,
+                                    isEmailWrong : true});
+                else if(response.res)
+                    this.setState({emailStatusImage : this.state.tick_green,
+                                    isEmailWrong : false});
+            } 
+        });
     }
 
     render(){
@@ -127,12 +159,17 @@ export default class Register extends Component{
                                 leftImage = {require('../res/images/user.png')}
                                 placeholder="Name"
                                 onChangeText={(name)=>this.setState({name})}/>
-                            <TextInput
-                                ref = {(ref)=>{this.emailView = ref}}
-                                style={{marginTop : 10}}
-                                leftImage = {require('../res/images/mail.png')}
-                                placeholder="Email"
-                                onChangeText={(email)=>this.setState({email})}/>
+                            <View style={{flex:1, flexDirection : 'row'}}>
+                                <TextInput
+                                    ref = {(ref)=>{this.emailView = ref}}
+                                    style={{marginTop : 10}}
+                                    leftImage = {require('../res/images/mail.png')}
+                                    placeholder="Email"
+                                    onChangeText={(email)=> {this.setState({email}); this.checkEmailAvailablity(email)}}/>
+                                {this.emailCheckImage()}
+                                <Image style={{position:'absolute',width : 25,height :25, left:'70%', top : '40%'}}
+                                    source={this.emailCheckImage()}/>
+                            </View>
                         </View>
 
                         <View style={[{width : this.state.width},styles.pageStyle]}>
@@ -167,6 +204,7 @@ export default class Register extends Component{
                     
                     <Button text={ ( this.state.currentPage != 3 ) ? "Continue" : "Sign up" }
                             style={{width : 310, borderRadius : 10, marginTop : 15}}
+                            disabled = {this.state.isEmailWrong}
                             onPress={this.onContinuePressed}/>
                     
                 </View>
@@ -178,5 +216,10 @@ export default class Register extends Component{
 const styles = StyleSheet.create({
     pageStyle : {
         alignItems:'center'
-    }
+    },
+    emailIndicatorStyle : {position:'absolute',
+        width : 20,
+        height :20,
+        left:'70%',
+        top : '45%'}
 });
