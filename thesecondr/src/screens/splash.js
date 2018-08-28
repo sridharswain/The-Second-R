@@ -49,7 +49,7 @@ export default class Splash extends Component{
                         <Image source={require("../res/images/logo.png")}
                             style={Styles.logo}/>
 
-                        <Text style={Styles.title} >The Second R</Text>
+                        <Text style={Styles.title} >SecondR</Text>
 
                 </Animated.View>
 

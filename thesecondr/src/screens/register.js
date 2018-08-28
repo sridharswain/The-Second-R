@@ -73,6 +73,7 @@ export default class Register extends Component{
         var name = this.state.name;
         var phone = this.state.phone;
         var address = this.state.address;
+        
         post('/signup',{
             name,
             email,
@@ -84,7 +85,7 @@ export default class Register extends Component{
             console.log(response);
             if(response.error) Toast.show(response.result,Toast.SHORT);
             else{
-                //GO TO LOGIN PAGE CODE GOES HERE
+                Toast.show("Successfully Registered",Toast.LONG);
                 Actions.pop();
             }
         });
@@ -144,7 +145,7 @@ export default class Register extends Component{
                     <Image source={require("../res/images/logo.png")}
                                 style={[Styles.logo,{marginTop:60}]}/>
 
-                    <Text style={Styles.title} >The Second R</Text>
+                    <Text style={Styles.title} >SecondR</Text>
                     <StepIndicator current={this.state.currentPage} style={{marginTop:50}} />
                     <ScrollView
                         ref = {(ref)=> this.scrollForm = ref}
