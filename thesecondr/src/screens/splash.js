@@ -3,6 +3,8 @@ import {View,Text,Image,Animated} from 'react-native';
 import {Actions} from 'react-native-router-flux';
 import Button from '../components/Button';
 import Styles from '../res/styles';
+import Logo from '../components/Logo';
+import GoogleSignIn from '../utils/GoogleSignIn'
 
 export default class Splash extends Component{
 
@@ -33,11 +35,18 @@ export default class Splash extends Component{
     componentDidMount(){
         this.fadeIn(this.state.logoFadeValue,1000,()=>{
             this.fadeIn(this.state.loginAnimValue,500);
-        })
+        });
     }
 
-    onLoginPress = () =>{
+    onLoginPress = () => {
         Actions.login();
+    }
+
+    onGoogleSignInPress = () => {
+        GoogleSignIn.signin((name,email) => {
+            console.log(email+" "+name);
+            //REGISTER OR LOGIN WITH GOOGLE GOES HERE
+        });
     }
 
     render(){
@@ -46,10 +55,7 @@ export default class Splash extends Component{
 
                 <Animated.View style={[{opacity : this.state.logoFadeValue,flex:1},Styles.center]}>
 
-                        <Image source={require("../res/images/logo.png")}
-                            style={Styles.logo}/>
-
-                        <Text style={Styles.title} >SecondR</Text>
+                        <Logo />
 
                 </Animated.View>
 

@@ -6,6 +6,7 @@ import Toast from '../utils/Toast'
 import Styles from '../res/styles';
 import TextInput from '../components/TextInput';
 import Button from '../components/Button';
+import Logo from '../components/Logo';
 
 export default class Login extends Component{
 
@@ -49,10 +50,7 @@ export default class Login extends Component{
             <View style={[Styles.container,{alignItems:'stretch'}]}>
                 <View style={[Styles.container,Styles.center]}>
 
-                    <Image source={require("../res/images/logo.png")}
-                            style={Styles.logo}/>
-
-                    <Text style={Styles.title} >SecondR</Text>
+                    <Logo />
 
                     <TextInput
                         style = {{marginTop : 20}} 

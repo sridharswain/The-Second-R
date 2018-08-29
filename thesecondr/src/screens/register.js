@@ -9,6 +9,7 @@ import Styles from '../res/styles';
 import Colors from '../res/colors';
 import Toast from '../utils/Toast'
 import { Actions } from 'react-native-router-flux';
+import Logo from '../components/Logo';
 
 
 const isBlank = (str) => {
@@ -142,10 +143,8 @@ export default class Register extends Component{
             <KeyboardAwareScrollView
                 showsVerticalScrollIndicator={false}>
                 <View style={[Styles.center]}>
-                    <Image source={require("../res/images/logo.png")}
-                                style={[Styles.logo,{marginTop:60}]}/>
-
-                    <Text style={Styles.title} >SecondR</Text>
+                <Logo style={{marginTop:60}}/>
+            
                     <StepIndicator current={this.state.currentPage} style={{marginTop:50}} />
                     <ScrollView
                         ref = {(ref)=> this.scrollForm = ref}
@@ -168,8 +167,6 @@ export default class Register extends Component{
                                     placeholder="Email"
                                     onChangeText={(email)=> {this.setState({email}); this.checkEmailAvailablity(email)}}/>
                                 {this.emailCheckImage()}
-                                <Image style={{position:'absolute',width : 25,height :25, left:'70%', top : '40%'}}
-                                    source={this.emailCheckImage()}/>
                             </View>
                         </View>
 
