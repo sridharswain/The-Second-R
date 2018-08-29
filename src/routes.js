@@ -3,7 +3,7 @@ const login = require('./controllers/login');
 const checkEmailAvailable = require('./controllers/checkEmailAvailable');
 const reply = require('./reply')
 
-module.exports = function(app,db){
+module.exports = function(app,db,firebase){
 
     //CHECK EMAIL AVAILABILITY
     app.get('/checkEmailAvailable',(req,res) => {
@@ -25,5 +25,11 @@ module.exports = function(app,db){
         login(req.body,db,(err,data) => {
             res.json(reply(err,data));
         });
-    })
+    });
+
+    //ADD NEW ORDER
+    app.post('/addOrder',(req,res) => {
+        console.log(req);
+        res.send("Hello World");
+    });
 }

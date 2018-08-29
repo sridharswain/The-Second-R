@@ -8,6 +8,6 @@ exports.init = function(){
         databaseURL: "https://the-second-r.firebaseio.com"
     });
     
-    console.log("Connected to DB");
+    console.log("Connected to Firebase DB");
     return admin.database();
 }
