@@ -47,7 +47,7 @@ public class GoogleSignin extends ReactContextBaseJavaModule {
         }
     }
 
-    public void signIn() {
+    private void signIn() {
         Intent signInIntent = mGoogleSignInClient.getSignInIntent();
         getCurrentActivity().startActivityForResult(signInIntent, 0);
     }
