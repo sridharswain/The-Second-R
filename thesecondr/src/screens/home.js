@@ -40,9 +40,6 @@ export default class Home extends Component{
     }*/
 
     render(){
-        /*
-        
-        */
         return(
             <Drawer
                 open={true}

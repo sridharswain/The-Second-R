@@ -19,6 +19,9 @@ public class NativeModulePackages implements ReactPackage {
         List<NativeModule> modules = new ArrayList<>();
         modules.add(new Toast(reactContext));
         modules.add(new GoogleSignin(reactContext));
+        modules.add(new CaptureImage(reactContext));
+        modules.add(new SelectImage(reactContext));
+        modules.add(new ImageUploader(reactContext));
         return modules;
     }
 
