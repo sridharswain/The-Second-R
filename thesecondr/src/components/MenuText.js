@@ -1,5 +1,5 @@
 import React,{Component} from 'react';
-import {TouchableOpacity,Text,View} from 'react-native';
+import {TouchableOpacity,Text,View,Image} from 'react-native';
 
 export default class MenuText extends Component {
 
@@ -11,9 +11,10 @@ export default class MenuText extends Component {
         //console.log(this.props.children);
         return(
             <TouchableOpacity onPress={this.props.onPress}>
-                <View style={{width : '100%'}}>
+                <View style={{flexDirection : 'row', width : '100%', alignItems:'center',paddingVertical:20}}>
+                    <Image source={this.props.source} style={{width : 20,height :20}}/>
                     <Text style = {{color:'black', fontSize : 20, fontFamily : 'Ubuntu-Medium',
-                                    padding:10}}>
+                                    marginLeft : 10}}>
                         {this.props.children}
                     </Text>
                 </View>

@@ -9,7 +9,7 @@ export default App = () => {
   return(
   <Router>
     <Stack key = "root">
-      <Scene key="home" component = {Home} initial/>
+      <Scene key="home" component = {Home} hideNavBar initial/>
       <Scene key="login" component = {Login} hideNavBar/>
       <Scene key="register" component = {Register} hideNavBar/>
       <Scene key="splash" component = {Splash} hideNavBar/>

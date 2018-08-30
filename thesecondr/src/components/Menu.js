@@ -11,12 +11,13 @@ export default class Menu extends Component{
 
     render(){
         return(
-            <View style={[{flex :1, alignItems:'center', padding : 30,backgroundColor:Colors.disabledGrey}]}>
+            <View style={[{flex :1, alignItems:'center', padding : 30,backgroundColor:Colors.disabledGrey,paddingTop:80}]}>
                 <Logo />
 
-                <View style = {{marginTop : 20}}/>
-                
-                {this.props.children}
+                <View style = {{marginTop : 80}}/>
+                <View style={{alignSelf : 'flex-start'}}>
+                    {this.props.children}
+                </View>
             </View>
         );
     }

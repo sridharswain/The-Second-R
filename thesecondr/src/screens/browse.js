@@ -2,6 +2,12 @@ import React,{Component} from 'react';
 import {View,Text,Image} from 'react-native';
 
 export default class Browse extends Component{
+
+    static pageTitle = "Browse"
+
+    constructor(props){
+        super(props);
+    }
     render(){
         return(
             <View>

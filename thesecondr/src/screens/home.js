@@ -1,7 +1,8 @@
 import React,{Component} from 'react';
-import {StyleSheet,Button} from 'react-native';
+import {StyleSheet,Image,View,Text} from 'react-native';
 import Drawer from 'react-native-drawer';
 import {Actions} from 'react-native-router-flux';
+import Styles from '../res/styles';
 import Menu from '../components/Menu';
 import MenuText from '../components/MenuText';
 import Browse from './browse';
@@ -19,7 +20,8 @@ export default class Home extends Component{
         this.orders = (<Orders />);
         this.profile = (<Profile />);
         this.state = {
-            currentPage : this.browse
+            currentPage : this.browse,
+            header : 'Home'
         }
     }
 
@@ -28,8 +30,12 @@ export default class Home extends Component{
         //Actions.sell();
     }
 
-    goto = (screen) =>{
-        this.setState({currentPage : screen});
+    logout = () => {
+        //LOGOUT CODE GOES HERE
+    }
+
+    goto = (screen,header) =>{
+        this.setState({currentPage : screen,header});
         this.drawer.close();
     }
 
@@ -41,6 +47,11 @@ export default class Home extends Component{
 
     render(){
         return(
+            <View style={Styles.container}>
+            <View style={drawerStyles.headerView}>
+                <Image source={require('../res/images/stack.png')} style={{width : 30, height :30}}/>
+                <Text style={drawerStyles.headerText}>{this.state.header}</Text>
+            </View>
             <Drawer
                 open={true}
                 panOpenMask = {0.2}
@@ -53,11 +64,11 @@ export default class Home extends Component{
                 ref = {(ref) => this.drawer = ref}
                 content={(
                 <Menu>
-                    <MenuText onPress={() => this.goto(this.browse)}>Browse</MenuText>
-                    <MenuText onPress={() => this.goto(this.sell)}>Sell</MenuText>
-                    <MenuText onPress={() => this.goto(this.orders)}>My Orders</MenuText>
-                    <MenuText onPress={() => this.goto(this.profile)}>My Profile</MenuText>
-                    <MenuText onPress={this.goToSell}>Logout</MenuText>
+                    <MenuText source={require('../res/images/search.png')} onPress={() => this.goto(this.browse,"Home")}>Browse</MenuText>
+                    <MenuText source={require('../res/images/trade.png')} onPress={() => this.goto(this.sell,"Sell")}>Sell</MenuText>
+                    <MenuText source={require('../res/images/orders.png')} onPress={() => this.goto(this.orders,"My Orders")}>My Orders</MenuText>
+                    <MenuText source={require('../res/images/personal.png')} onPress={() => this.goto(this.profile,"My Profile")}>My Profile</MenuText>
+                    <MenuText source={require('../res/images/logout.png')} onPress={this.logout}>Logout</MenuText>
                 </Menu>
                 )}
                 openDrawerOffset={0.4}
@@ -66,6 +77,7 @@ export default class Home extends Component{
                   })}>
                 {this.state.currentPage}
             </Drawer>
+            </View>
         );
     }
 }
@@ -73,4 +85,18 @@ export default class Home extends Component{
 const drawerStyles = StyleSheet.create({
     drawer: { shadowColor: '#000000', shadowOpacity: 0.8, shadowRadius: 3},
     main: {paddingLeft: 3},
+    headerView : {
+        alignItems:'center',
+        justifyContent:'flex-start',
+        flexDirection:'row',
+        width:'100%',
+        height:60,
+        elevation:5,
+        backgroundColor:'white',
+        padding :10
+    },
+    headerText : {
+        fontSize : 25,
+        marginLeft : 10
+    }
   });

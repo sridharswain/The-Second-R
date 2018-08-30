@@ -4,7 +4,7 @@
             "outputFile": "/home/sid/Projects/The-Second-R/thesecondr/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v23/values-v23.xml",
             "map": [
                 {
-                    "source": "/home/sid/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/072b26172a4332635e7803295b466b06/res/values-v23/values-v23.xml",
+                    "source": "/home/sid/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/20f351e1910bcc2ff007397869452ebc/res/values-v23/values-v23.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,19,32,33,34,35,36",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4",
