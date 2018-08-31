@@ -5,7 +5,7 @@ import Styles from '../res/styles';
 export default class TextInput extends Component{
     render(){
         return(
-            <View style={[styles.container,Styles.center,this.props.style]}>
+            <View style={[styles.container,this.props.style]}>
                 <Image style={[{width : 30,height :30},Styles.center]} source={this.props.leftImage}/>
 
                 <RTextInput
@@ -32,6 +32,7 @@ const styles = StyleSheet.create({
         borderWidth : 1,
         borderRadius : 10,
         paddingHorizontal : 10,
-        paddingVertical : 3
+        paddingVertical : 3,
+        alignItems : 'center'
     }
 })
