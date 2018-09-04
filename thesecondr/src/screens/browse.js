@@ -10,7 +10,7 @@ export default class Browse extends Component{
     }
     render(){
         return(
-            <View>
+            <View style={{backgroundColor : 'white'}}>
                 <Image source={require('../res/images/route.png') }/>
                 <Text style ={{color : 'blue'}}>Browse</Text>
             </View>

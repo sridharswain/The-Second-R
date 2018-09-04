@@ -14,6 +14,7 @@ import Profile from './profile';
 export default class Home extends Component{
 
     constructor(props){
+        console.log("Cont");
         super(props);
         this.browse = (<Browse />);
         this.sell = (<Sell />);
@@ -31,7 +32,7 @@ export default class Home extends Component{
     }
 
     goto = (screen,header) =>{
-        this.setState({currentPage : screen,header});
+        this.setState({currentPage : screen, header});
         this.drawer.close();
     }
 
@@ -40,7 +41,16 @@ export default class Home extends Component{
         else this.drawer.open();
     }
 
+    componentWillMount() {
+        console.log("Will Mount");
+    }
+
+    componentDidMount() {
+        console.log("Did Mount");
+    }
+
     render(){
+        console.log("Render");
         return(
             <View style={Styles.container}>
             <View style={drawerStyles.headerView}>
@@ -52,14 +62,14 @@ export default class Home extends Component{
             </View>
             <Drawer
                 tapToClose
-                panOpenMask = {0.2}
-                panCloseMask = {0.2}
+                panOpenMask = {0.07}
+                panCloseMask = {0.07}
                 negotiatePan={true}
                 captureGestures={true}
                 type="displace"
                 side = 'left'
-                onClose = {() => this.setState({isDrawerOpen : !this.state.isDrawerOpen})}
-                onOpen = {() => this.setState({isDrawerOpen : !this.state.isDrawerOpen})}
+                onClose = {() => this.setState({isDrawerOpen : false})}
+                onOpen = {() => this.setState({isDrawerOpen : true})}
                 styles={drawerStyles}
                 ref = {(ref) => this.drawer = ref}
                 content={(
@@ -84,7 +94,6 @@ export default class Home extends Component{
 
 const drawerStyles = StyleSheet.create({
     drawer: { shadowColor: '#000000', shadowOpacity: 0.8, shadowRadius: 3},
-    main: {paddingLeft: 3},
     headerView : {
         alignItems:'center',
         justifyContent:'flex-start',
