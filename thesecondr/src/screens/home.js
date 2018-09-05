@@ -14,7 +14,6 @@ import Profile from './profile';
 export default class Home extends Component{
 
     constructor(props){
-        console.log("Cont");
         super(props);
         this.browse = (<Browse />);
         this.sell = (<Sell />);
@@ -41,16 +40,7 @@ export default class Home extends Component{
         else this.drawer.open();
     }
 
-    componentWillMount() {
-        console.log("Will Mount");
-    }
-
-    componentDidMount() {
-        console.log("Did Mount");
-    }
-
     render(){
-        console.log("Render");
         return(
             <View style={Styles.container}>
             <View style={drawerStyles.headerView}>
