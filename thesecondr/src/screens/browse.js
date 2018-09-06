@@ -1,5 +1,6 @@
 import React,{Component} from 'react';
-import {View,Text,Image,FlatList,StyleSheet} from 'react-native';
+import {View,Text,Image,FlatList,StyleSheet,TouchableOpacity} from 'react-native';
+import {Actions} from 'react-native-router-flux';
 import { get } from '../utils/request';
 import Styles from '../res/styles';
 
@@ -25,11 +26,13 @@ export default class Browse extends Component{
 
     renderItem = (item) => {
         return(
-            <View style={styles.cardRoot}>
-                <Image source={{uri : item.imageLink[0]}} style={{height : 250, width : '100%'}}/>
-                <Text style={styles.cardTitleStyle}>{item.title}</Text>
-                <Text style={[styles.cardTitleStyle,{fontSize:16}]}>{"Rs. "+item.cost}</Text>
-            </View>
+            <TouchableOpacity onPress={() => Actions.post({data : item})}>
+                <View style={styles.cardRoot}>
+                    <Image source={{uri : item.imageLink[0]}} style={{height : 250, width : '100%'}}/>
+                    <Text style={styles.cardTitleStyle}>{item.title}</Text>
+                    <Text style={[styles.cardTitleStyle,{fontSize:16}]}>{"Rs. "+item.cost}</Text>
+                </View>
+            </TouchableOpacity>
         );
     }
 

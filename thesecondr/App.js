@@ -4,6 +4,7 @@ import Splash from "./src/screens/splash";
 import Login from './src/screens/login';
 import Register from './src/screens/register';
 import Home from './src/screens/home';
+import Post from './src/screens/post';
 
 export default App = () => {
   return(
@@ -13,6 +14,7 @@ export default App = () => {
         <Scene key="login" component = {Login} hideNavBar/>
         <Scene key="register" component = {Register} hideNavBar/>
         <Scene key="splash" component = {Splash} hideNavBar/>
+        <Scene key="post" component = {Post} hideNavBar />
       </Stack>
     </Router>
   );

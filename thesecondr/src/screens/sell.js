@@ -77,11 +77,11 @@ export default class Sell extends Component{
 
     accumulatePhoneDesc = () => {
         var desc = this.state.desc;
-        desc += '\n'
-        + " Warranty : " + isAvailable(this.state.warranty)
-        + " Earphone : " + isAvailable(this.state.earphone)
-        + " Charger : " + isAvailable(this.state.charger)
-        + " Manual : " + isAvailable(this.state.manual);
+        desc += "\n"
+        + "\nWarranty : " + isAvailable(this.state.warranty)
+        + "\nEarphone : " + isAvailable(this.state.earphone)
+        + "\nCharger : " + isAvailable(this.state.charger)
+        + "\nManual : " + isAvailable(this.state.manual);
         return desc;
     }
 
@@ -149,7 +149,7 @@ export default class Sell extends Component{
     render(){
         return (
             <View style={[Styles.container,styles.root]}>
-            <UploadModal visible={this.state.showUploadingModal}>{this.state.toUploadNum + " Images Uploaded"}</UploadModal>
+            <UploadModal visible={this.state.showUploadingModal}>{this.state.toUploadNum +"/"+this.images.length+ " Images Uploaded"}</UploadModal>
             <ImagePicker visible={this.state.showImagePicker} onResult = {this.handleImagePicker}/>
                 <View style={styles.categoryRoot}>
                     <View style={styles.categoryContainer}>
