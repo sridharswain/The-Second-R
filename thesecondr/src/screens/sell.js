@@ -3,6 +3,7 @@ import {View,Text,StyleSheet,DatePickerAndroid, ListView, Image} from 'react-nat
 import CheckBox from '../components/CheckBox'; 
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
 import Moment from 'moment';
+import { post } from '../utils/request';
 import ImageUploader from '../utils/Uploader';
 import Styles from '../res/styles';
 import Colors from '../res/colors';
@@ -28,7 +29,7 @@ export default class Sell extends Component{
             showUploadingModal : false,
             category : null,
             boughtDate : "Bought Date",
-            model : '',
+            title : '',
             charger : false,
             earphone : false,
             manual : false,
@@ -98,17 +99,30 @@ export default class Sell extends Component{
         this.setState({imageDataSource : this.imgDataSource.cloneWithRows(this.images)});
     }
 
+    handleAfterUpload = () => {
+        let title = this.state.title;
+        let boughtDate = this.state.boughtDate;
+        let description = this.accumulatePhoneDesc();
+        let imageLink = this.remoteImages;
+        post('/postAd',{ title,imageLink,description,cost : 60})
+        .then((res) => {
+            console.log(res);
+        })
+    }
+
     upload = (index) => {
         if(index == -1 ) {
             this.setState({showUploadingModal : false});
+            this.handleAfterUpload();
             return;
         }
         ImageUploader.upload(this.images[index],(err,result) => {
             console.log(err);
             if(!err){
                 this.remoteImages.push(result);
-                this.upload(index-1);
-                this.setState({ toUploadNum : this.state.toUploadNum + 1 });
+                this.setState({ toUploadNum : this.state.toUploadNum + 1 },() => {
+                    this.upload(index-1);
+                });
             }
             else{
                 alert("Failed");
@@ -169,7 +183,7 @@ export default class Sell extends Component{
                             <View>
                                 <TextInput style={styles.formTextStyle} placeholder="Product Model" 
                                         leftImage = {require('../res/images/name.png')}
-                                        onChangeText = {(model) => this.setState({model})}/>
+                                        onChangeText = {(title) => this.setState({title})}/>
                                 <TextInput style={styles.formTextStyle} placeholder="Product Model" 
                                         leftImage = {require('../res/images/calendar.png')}
                                         onPress = {() => this.handleDatePicker()}
