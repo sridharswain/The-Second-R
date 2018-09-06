@@ -2,7 +2,8 @@ const register = require('./controllers/register');
 const login = require('./controllers/login');
 const checkEmailAvailable = require('./controllers/checkEmailAvailable');
 const postAd = require('./controllers/postAd');
-const reply = require('./reply')
+const getAds = require('./controllers/getAds');
+const reply = require('./reply');
 
 module.exports = function(app,db){
 
@@ -38,6 +39,13 @@ module.exports = function(app,db){
         postAd(req.body,(err,data) => {
             if(err) res.json(reply(true,"Failed"));
             else res.json(reply(false,"Succeed"))
+        });
+    });
+
+    //GET ALL POSTS
+    app.get('/getAds',(req,res) => {
+        getAds(req.query,(err,data) => {
+            res.json(reply(err,data));
         });
     });
 }
