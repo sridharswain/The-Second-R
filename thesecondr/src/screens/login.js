@@ -1,5 +1,5 @@
 import React,{Component} from 'react';
-import {View,Dimensions,Image,Text} from 'react-native';
+import {View,Dimensions,Image,Text,AppRegistry} from 'react-native';
 import {Actions} from 'react-native-router-flux';
 import {post} from '../utils/request';
 import Toast from '../utils/Toast'

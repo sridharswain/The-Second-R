@@ -42,7 +42,7 @@ public class ImageUploader extends ReactContextBaseJavaModule {
         uploadTask.addOnFailureListener(new OnFailureListener() {
             @Override
             public void onFailure(@NonNull Exception e) {
-                callback.invoke(true);
+                callback.invoke(true,"Failed");
             }
         }).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
             @Override
