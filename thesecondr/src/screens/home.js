@@ -15,10 +15,10 @@ export default class Home extends Component{
 
     constructor(props){
         super(props);
-        this.browse = (<Browse />);
-        this.sell = (<Sell />);
-        this.orders = (<Orders />);
-        this.profile = (<Profile />);
+        this.browse = (<Browse goto={this.gotoByHeader}/>);
+        this.sell = (<Sell goto={this.gotoByHeader}/>);
+        this.orders = (<Orders goto={this.gotoByHeader}/>);
+        this.profile = (<Profile goto={this.gotoByHeader}/>);
         this.state = {
             currentPage : this.browse,
             header : 'Home',
@@ -28,6 +28,23 @@ export default class Home extends Component{
 
     logout = () => {
         //LOGOUT CODE GOES HERE
+    }
+
+    gotoByHeader = (header) => {
+        switch(header){
+            case 'Home':
+                this.goto(this.browse,header);
+                break;
+            case 'Sell':
+                this.goto(this.sell,header);
+                break;
+            case 'My Orders':
+                this.goto(this.orders,header);
+                break;
+            case 'My Profile':
+                this.goto(this.profile,header);
+                break;
+        }
     }
 
     goto = (screen,header) =>{

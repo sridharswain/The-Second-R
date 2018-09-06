@@ -12,6 +12,7 @@ import CircleIcon from '../components/CircleIcon';
 import Button from '../components/Button';
 import ImagePicker from '../components/ImagePicker';
 import UploadModal from '../components/UploadModal';
+import Toast from '../utils/Toast';
 
 const isAvailable = (val) => {
     return (val ? "Available" : "Not Available");
@@ -77,11 +78,11 @@ export default class Sell extends Component{
     accumulatePhoneDesc = () => {
         var desc = this.state.desc;
         desc += '\n'
-        + "Warranty : " + isAvailable(this.state.warranty)
-        + "Earphone : " + isAvailable(this.state.earphone)
-        + "Charger : " + isAvailable(this.state.charger)
-        + "Manual : " + isAvailable(this.state.manual);
-        this.setState({desc});
+        + " Warranty : " + isAvailable(this.state.warranty)
+        + " Earphone : " + isAvailable(this.state.earphone)
+        + " Charger : " + isAvailable(this.state.charger)
+        + " Manual : " + isAvailable(this.state.manual);
+        return desc;
     }
 
     imgItem = (data) => {
@@ -106,8 +107,12 @@ export default class Sell extends Component{
         let imageLink = this.remoteImages;
         post('/postAd',{ title,imageLink,description,cost : 60})
         .then((res) => {
-            console.log(res);
-        })
+            if(res.err) alert("Failed");
+            else{
+                Toast.show("Ad Posted",Toast.LONG);
+                this.props.goto("Home");
+            }
+        });
     }
 
     upload = (index) => {
@@ -117,7 +122,6 @@ export default class Sell extends Component{
             return;
         }
         ImageUploader.upload(this.images[index],(err,result) => {
-            console.log(err);
             if(!err){
                 this.remoteImages.push(result);
                 this.setState({ toUploadNum : this.state.toUploadNum + 1 },() => {
