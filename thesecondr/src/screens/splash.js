@@ -1,5 +1,5 @@
 import React,{Component} from 'react';
-import {View,Text,Image,Animated} from 'react-native';
+import {View,Image,Animated, AsyncStorage} from 'react-native';
 import {Actions} from 'react-native-router-flux';
 import Button from '../components/Button';
 import Styles from '../res/styles';
@@ -34,12 +34,27 @@ export default class Splash extends Component{
 
     componentDidMount(){
         this.fadeIn(this.state.logoFadeValue,1000,()=>{
-            this.fadeIn(this.state.loginAnimValue,500);
+            this.checkUserAlreadyLogin()
+            .then((available) => {
+                if(available) Actions.home({type : 'replace'});
+                else this.fadeIn(this.state.loginAnimValue,500);
+            })
         });
     }
 
     onLoginPress = () => {
         Actions.login();
+    }
+
+    checkUserAlreadyLogin = async () => {
+        try{
+            const val = await AsyncStorage.getItem('userData');
+            return (val !== null);
+        }
+        catch(ex){
+            console.log(ex);
+        }
+        return false;
     }
 
     onGoogleSignInPress = () => {
@@ -53,7 +68,7 @@ export default class Splash extends Component{
         return(
             <View style={{flex:1}}>
 
-                <Animated.View style={[{opacity : this.state.logoFadeValue,flex:1},Styles.center]}>
+                <Animated.View style={[{opacity : this.state.logoFadeValue, flex:1},Styles.center]}>
 
                         <Logo />
 

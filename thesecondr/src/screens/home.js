@@ -1,5 +1,5 @@
 import React,{Component} from 'react';
-import {StyleSheet,Image,View,Text,TouchableOpacity} from 'react-native';
+import {StyleSheet,Image,View,Text,TouchableOpacity,AsyncStorage} from 'react-native';
 import Drawer from 'react-native-drawer';
 import {Actions} from 'react-native-router-flux';
 import Styles from '../res/styles';
@@ -26,8 +26,17 @@ export default class Home extends Component{
         }
     }
 
-    logout = () => {
+    logout = async () => {
         //LOGOUT CODE GOES HERE
+        try{
+            await AsyncStorage.removeItem('userData',(err) => {
+                console.log(err);
+            });
+            Actions.splash({type : 'replace' });
+        }
+        catch(ex){
+            console.log(ex);
+        }
     }
 
     gotoByHeader = (header) => {
@@ -67,33 +76,33 @@ export default class Home extends Component{
                 </TouchableOpacity>
                 <Text style={drawerStyles.headerText}>{this.state.header}</Text>
             </View>
-            <Drawer
-                tapToClose
-                panOpenMask = {0.07}
-                panCloseMask = {0.07}
-                negotiatePan={true}
-                captureGestures={true}
-                type="displace"
-                side = 'left'
-                onClose = {() => this.setState({isDrawerOpen : false})}
-                onOpen = {() => this.setState({isDrawerOpen : true})}
-                styles={drawerStyles}
-                ref = {(ref) => this.drawer = ref}
-                content={(
-                <Menu>
-                    <MenuText source={require('../res/images/search.png')} onPress={() => this.goto(this.browse,"Home")}>Home</MenuText>
-                    <MenuText source={require('../res/images/trade.png')} onPress={() => this.goto(this.sell,"Sell")}>Sell</MenuText>
-                    <MenuText source={require('../res/images/orders.png')} onPress={() => this.goto(this.orders,"My Orders")}>My Orders</MenuText>
-                    <MenuText source={require('../res/images/personal.png')} onPress={() => this.goto(this.profile,"My Profile")}>My Profile</MenuText>
-                    <MenuText source={require('../res/images/logout.png')} onPress={this.logout}>Logout</MenuText>
-                </Menu>
-                )}
-                openDrawerOffset={0.4}
-                tweenHandler={(ratio) => ({
-                    main: { opacity: Math.max(0.1,(1-ratio)) }
-                  })}>
-                {this.state.currentPage}
-            </Drawer>
+                <Drawer
+                    tapToClose
+                    panOpenMask = {0.07}
+                    panCloseMask = {0.07}
+                    negotiatePan={true}
+                    captureGestures={true}
+                    type="displace"
+                    side = 'left'
+                    onClose = {() => this.setState({isDrawerOpen : false})}
+                    onOpen = {() => this.setState({isDrawerOpen : true})}
+                    styles={drawerStyles}
+                    ref = {(ref) => this.drawer = ref}
+                    content={(
+                        <Menu>
+                            <MenuText source={require('../res/images/search.png')} onPress={() => this.goto(this.browse,"Home")}>Home</MenuText>
+                            <MenuText source={require('../res/images/trade.png')} onPress={() => this.goto(this.sell,"Sell")}>Sell</MenuText>
+                            <MenuText source={require('../res/images/orders.png')} onPress={() => this.goto(this.orders,"My Orders")}>My Orders</MenuText>
+                            <MenuText source={require('../res/images/personal.png')} onPress={() => this.goto(this.profile,"My Profile")}>My Profile</MenuText>
+                            <MenuText source={require('../res/images/logout.png')} onPress={this.logout}>Logout</MenuText>
+                        </Menu>
+                    )}
+                    openDrawerOffset={0.4}
+                    tweenHandler={(ratio) => ({
+                        main: { opacity: Math.max(0.1,(1-ratio)) }
+                    })}>
+                    {this.state.currentPage}
+                </Drawer>
             </View>
         );
     }

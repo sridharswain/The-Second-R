@@ -5,6 +5,7 @@ INJECTED from /home/sid/Projects/The-Second-R/thesecondr/android/app/src/main/An
 INJECTED from /home/sid/Projects/The-Second-R/thesecondr/android/app/src/main/AndroidManifest.xml:2:1-47:12
 INJECTED from /home/sid/Projects/The-Second-R/thesecondr/android/app/src/main/AndroidManifest.xml:2:1-47:12
 MERGED from [:react-native-vector-icons] /home/sid/Projects/The-Second-R/thesecondr/node_modules/react-native-vector-icons/android/build/intermediates/manifests/full/debug/AndroidManifest.xml:2:1-11:12
+MERGED from [:react-native-fast-image] /home/sid/Projects/The-Second-R/thesecondr/node_modules/react-native-fast-image/android/build/intermediates/manifests/full/debug/AndroidManifest.xml:2:1-12:12
 MERGED from [com.facebook.react:react-native:0.56.0] /home/sid/.gradle/caches/transforms-1/files-1.1/react-native-0.56.0.aar/21172696b061d9aa26034aacd9514b16/AndroidManifest.xml:2:1-15:12
 MERGED from [com.android.support:appcompat-v7:26.1.0] /home/sid/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/20f351e1910bcc2ff007397869452ebc/AndroidManifest.xml:17:1-31:12
 MERGED from [com.google.android.gms:play-services-auth:16.0.0] /home/sid/.gradle/caches/transforms-1/files-1.1/play-services-auth-16.0.0.aar/725df00d84b8d67ff3275af164c5b6df/AndroidManifest.xml:17:1-39:12
@@ -12,8 +13,6 @@ MERGED from [com.google.firebase:firebase-core:16.0.1] /home/sid/.gradle/caches/
 MERGED from [com.google.firebase:firebase-storage:16.0.1] /home/sid/.gradle/caches/transforms-1/files-1.1/firebase-storage-16.0.1.aar/60a084adea7da5c3d0fc00fa4ec7828d/AndroidManifest.xml:2:1-7:12
 MERGED from [com.android.support.constraint:constraint-layout:1.1.2] /home/sid/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.2.aar/59b6036b0dd837b3f12a61e80f13ffc2/AndroidManifest.xml:2:1-11:12
 MERGED from [com.android.support:recyclerview-v7:26.1.0] /home/sid/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-26.1.0.aar/e8164f41d4d1a5935103252b5e8fce60/AndroidManifest.xml:17:1-28:12
-MERGED from [com.android.support:animated-vector-drawable:26.1.0] /home/sid/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.1.0.aar/89933077f2432ebbe89387606a8a0c67/AndroidManifest.xml:17:1-28:12
-MERGED from [com.android.support:support-vector-drawable:26.1.0] /home/sid/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-26.1.0.aar/de67747586239f47a6a3f4ff0bf7858e/AndroidManifest.xml:17:1-28:12
 MERGED from [com.google.android.gms:play-services-auth-api-phone:15.0.1] /home/sid/.gradle/caches/transforms-1/files-1.1/play-services-auth-api-phone-15.0.1.aar/4bdd9e77f2ac144646e791f29fb98ba0/AndroidManifest.xml:2:1-7:12
 MERGED from [com.google.android.gms:play-services-auth-base:15.1.0] /home/sid/.gradle/caches/transforms-1/files-1.1/play-services-auth-base-15.1.0.aar/52bab64cb68c201bf088750fa4ea62cb/AndroidManifest.xml:2:1-7:12
 MERGED from [com.google.firebase:firebase-measurement-connector-impl:16.0.1] /home/sid/.gradle/caches/transforms-1/files-1.1/firebase-measurement-connector-impl-16.0.1.aar/e57aa09574a7c2e071363abe877b167c/AndroidManifest.xml:17:1-34:12
@@ -30,6 +29,10 @@ MERGED from [com.google.firebase:firebase-measurement-connector:16.0.0] /home/si
 MERGED from [com.google.android.gms:play-services-ads-identifier:15.0.1] /home/sid/.gradle/caches/transforms-1/files-1.1/play-services-ads-identifier-15.0.1.aar/4de7c05a5e2970015ede976b30057ecf/AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.android.gms:play-services-basement:15.0.1] /home/sid/.gradle/caches/transforms-1/files-1.1/play-services-basement-15.0.1.aar/2450bd77cc235333b60b79e2b8a7f264/AndroidManifest.xml:17:1-28:12
 MERGED from [com.android.support:support-v4:26.1.0] /home/sid/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/b063d3a074d6527c7b09f9a0da09472f/AndroidManifest.xml:17:1-31:12
+MERGED from [com.github.bumptech.glide:okhttp3-integration:4.7.1] /home/sid/.gradle/caches/transforms-1/files-1.1/okhttp3-integration-4.7.1.aar/45b06648665c23976c5964c275a1a6c7/AndroidManifest.xml:2:1-16:12
+MERGED from [com.github.bumptech.glide:glide:4.7.1] /home/sid/.gradle/caches/transforms-1/files-1.1/glide-4.7.1.aar/1e1e184c4f8058d2229e61d49450333c/AndroidManifest.xml:2:1-13:12
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] /home/sid/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.1.0.aar/89933077f2432ebbe89387606a8a0c67/AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:support-vector-drawable:26.1.0] /home/sid/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-26.1.0.aar/de67747586239f47a6a3f4ff0bf7858e/AndroidManifest.xml:17:1-28:12
 MERGED from [com.android.support:support-fragment:26.1.0] /home/sid/.gradle/caches/transforms-1/files-1.1/support-fragment-26.1.0.aar/23e24dd04f857776079a2cf6b9776f29/AndroidManifest.xml:17:1-31:12
 MERGED from [com.android.support:support-core-ui:26.1.0] /home/sid/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.1.0.aar/1d88fde4def6768bd75af6a70523d4cb/AndroidManifest.xml:17:1-31:12
 MERGED from [com.android.support:support-media-compat:26.1.0] /home/sid/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/92e7b91be5e75ef28dbd7fe56fae347e/AndroidManifest.xml:17:1-31:12
@@ -43,6 +46,7 @@ MERGED from [com.facebook.fresco:imagepipeline:1.9.0] /home/sid/.gradle/caches/t
 MERGED from [com.facebook.fresco:imagepipeline-base:1.9.0] /home/sid/.gradle/caches/transforms-1/files-1.1/imagepipeline-base-1.9.0.aar/c936a4ec4f7cbecaf6aa805da51d39ce/AndroidManifest.xml:2:1-9:12
 MERGED from [com.facebook.soloader:soloader:0.3.0] /home/sid/.gradle/caches/transforms-1/files-1.1/soloader-0.3.0.aar/81c42056bdad62631ffe2ccff3bb8c74/AndroidManifest.xml:2:1-13:12
 MERGED from [org.webkit:android-jsc:r174650] /home/sid/.gradle/caches/transforms-1/files-1.1/android-jsc-r174650.aar/80bbb41b6f4a696c5ad0b5bf987f6095/AndroidManifest.xml:1:1-3:12
+MERGED from [com.github.bumptech.glide:gifdecoder:4.7.1] /home/sid/.gradle/caches/transforms-1/files-1.1/gifdecoder-4.7.1.aar/c2ae3233ab927edc54b404bbddd915f0/AndroidManifest.xml:2:1-11:12
 MERGED from [com.facebook.fresco:fbcore:1.9.0] /home/sid/.gradle/caches/transforms-1/files-1.1/fbcore-1.9.0.aar/bd2959c0298453f5fe33693ebad0fafc/AndroidManifest.xml:2:1-9:12
 MERGED from [com.google.android.gms:play-services-measurement-base:16.0.0] /home/sid/.gradle/caches/transforms-1/files-1.1/play-services-measurement-base-16.0.0.aar/ebe0f6c994f3fd0528704c64b7e7a2f5/AndroidManifest.xml:17:1-24:12
 MERGED from [android.arch.lifecycle:runtime:1.0.0] /home/sid/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/9ec1b65d9ffa990da36530cc2401855b/AndroidManifest.xml:17:1-30:12
@@ -113,10 +117,6 @@ MERGED from [com.android.support.constraint:constraint-layout:1.1.2] /home/sid/.
 MERGED from [com.android.support.constraint:constraint-layout:1.1.2] /home/sid/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.2.aar/59b6036b0dd837b3f12a61e80f13ffc2/AndroidManifest.xml:9:5-20
 MERGED from [com.android.support:recyclerview-v7:26.1.0] /home/sid/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-26.1.0.aar/e8164f41d4d1a5935103252b5e8fce60/AndroidManifest.xml:22:5-26:19
 MERGED from [com.android.support:recyclerview-v7:26.1.0] /home/sid/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-26.1.0.aar/e8164f41d4d1a5935103252b5e8fce60/AndroidManifest.xml:22:5-26:19
-MERGED from [com.android.support:animated-vector-drawable:26.1.0] /home/sid/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.1.0.aar/89933077f2432ebbe89387606a8a0c67/AndroidManifest.xml:22:5-26:19
-MERGED from [com.android.support:animated-vector-drawable:26.1.0] /home/sid/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.1.0.aar/89933077f2432ebbe89387606a8a0c67/AndroidManifest.xml:22:5-26:19
-MERGED from [com.android.support:support-vector-drawable:26.1.0] /home/sid/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-26.1.0.aar/de67747586239f47a6a3f4ff0bf7858e/AndroidManifest.xml:22:5-26:19
-MERGED from [com.android.support:support-vector-drawable:26.1.0] /home/sid/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-26.1.0.aar/de67747586239f47a6a3f4ff0bf7858e/AndroidManifest.xml:22:5-26:19
 MERGED from [com.google.firebase:firebase-measurement-connector-impl:16.0.1] /home/sid/.gradle/caches/transforms-1/files-1.1/firebase-measurement-connector-impl-16.0.1.aar/e57aa09574a7c2e071363abe877b167c/AndroidManifest.xml:26:5-32:19
 MERGED from [com.google.firebase:firebase-measurement-connector-impl:16.0.1] /home/sid/.gradle/caches/transforms-1/files-1.1/firebase-measurement-connector-impl-16.0.1.aar/e57aa09574a7c2e071363abe877b167c/AndroidManifest.xml:26:5-32:19
 MERGED from [com.google.firebase:firebase-analytics:16.0.1] /home/sid/.gradle/caches/transforms-1/files-1.1/firebase-analytics-16.0.1.aar/459f7d3ce0cece3ccc406d0a5ed38578/AndroidManifest.xml:28:5-53:19
@@ -143,6 +143,14 @@ MERGED from [com.google.android.gms:play-services-basement:15.0.1] /home/sid/.gr
 MERGED from [com.google.android.gms:play-services-basement:15.0.1] /home/sid/.gradle/caches/transforms-1/files-1.1/play-services-basement-15.0.1.aar/2450bd77cc235333b60b79e2b8a7f264/AndroidManifest.xml:22:5-26:19
 MERGED from [com.android.support:support-v4:26.1.0] /home/sid/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/b063d3a074d6527c7b09f9a0da09472f/AndroidManifest.xml:25:5-29:19
 MERGED from [com.android.support:support-v4:26.1.0] /home/sid/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/b063d3a074d6527c7b09f9a0da09472f/AndroidManifest.xml:25:5-29:19
+MERGED from [com.github.bumptech.glide:okhttp3-integration:4.7.1] /home/sid/.gradle/caches/transforms-1/files-1.1/okhttp3-integration-4.7.1.aar/45b06648665c23976c5964c275a1a6c7/AndroidManifest.xml:10:5-14:19
+MERGED from [com.github.bumptech.glide:okhttp3-integration:4.7.1] /home/sid/.gradle/caches/transforms-1/files-1.1/okhttp3-integration-4.7.1.aar/45b06648665c23976c5964c275a1a6c7/AndroidManifest.xml:10:5-14:19
+MERGED from [com.github.bumptech.glide:glide:4.7.1] /home/sid/.gradle/caches/transforms-1/files-1.1/glide-4.7.1.aar/1e1e184c4f8058d2229e61d49450333c/AndroidManifest.xml:11:5-20
+MERGED from [com.github.bumptech.glide:glide:4.7.1] /home/sid/.gradle/caches/transforms-1/files-1.1/glide-4.7.1.aar/1e1e184c4f8058d2229e61d49450333c/AndroidManifest.xml:11:5-20
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] /home/sid/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.1.0.aar/89933077f2432ebbe89387606a8a0c67/AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] /home/sid/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.1.0.aar/89933077f2432ebbe89387606a8a0c67/AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:support-vector-drawable:26.1.0] /home/sid/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-26.1.0.aar/de67747586239f47a6a3f4ff0bf7858e/AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:support-vector-drawable:26.1.0] /home/sid/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-26.1.0.aar/de67747586239f47a6a3f4ff0bf7858e/AndroidManifest.xml:22:5-26:19
 MERGED from [com.android.support:support-fragment:26.1.0] /home/sid/.gradle/caches/transforms-1/files-1.1/support-fragment-26.1.0.aar/23e24dd04f857776079a2cf6b9776f29/AndroidManifest.xml:25:5-29:19
 MERGED from [com.android.support:support-fragment:26.1.0] /home/sid/.gradle/caches/transforms-1/files-1.1/support-fragment-26.1.0.aar/23e24dd04f857776079a2cf6b9776f29/AndroidManifest.xml:25:5-29:19
 MERGED from [com.android.support:support-core-ui:26.1.0] /home/sid/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.1.0.aar/1d88fde4def6768bd75af6a70523d4cb/AndroidManifest.xml:25:5-29:19
@@ -157,6 +165,8 @@ MERGED from [com.facebook.soloader:soloader:0.3.0] /home/sid/.gradle/caches/tran
 MERGED from [com.facebook.soloader:soloader:0.3.0] /home/sid/.gradle/caches/transforms-1/files-1.1/soloader-0.3.0.aar/81c42056bdad62631ffe2ccff3bb8c74/AndroidManifest.xml:11:5-20
 MERGED from [org.webkit:android-jsc:r174650] /home/sid/.gradle/caches/transforms-1/files-1.1/android-jsc-r174650.aar/80bbb41b6f4a696c5ad0b5bf987f6095/AndroidManifest.xml:2:3-17
 MERGED from [org.webkit:android-jsc:r174650] /home/sid/.gradle/caches/transforms-1/files-1.1/android-jsc-r174650.aar/80bbb41b6f4a696c5ad0b5bf987f6095/AndroidManifest.xml:2:3-17
+MERGED from [com.github.bumptech.glide:gifdecoder:4.7.1] /home/sid/.gradle/caches/transforms-1/files-1.1/gifdecoder-4.7.1.aar/c2ae3233ab927edc54b404bbddd915f0/AndroidManifest.xml:9:5-20
+MERGED from [com.github.bumptech.glide:gifdecoder:4.7.1] /home/sid/.gradle/caches/transforms-1/files-1.1/gifdecoder-4.7.1.aar/c2ae3233ab927edc54b404bbddd915f0/AndroidManifest.xml:9:5-20
 MERGED from [com.google.android.gms:play-services-measurement-base:16.0.0] /home/sid/.gradle/caches/transforms-1/files-1.1/play-services-measurement-base-16.0.0.aar/ebe0f6c994f3fd0528704c64b7e7a2f5/AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.gms:play-services-measurement-base:16.0.0] /home/sid/.gradle/caches/transforms-1/files-1.1/play-services-measurement-base-16.0.0.aar/ebe0f6c994f3fd0528704c64b7e7a2f5/AndroidManifest.xml:22:5-20
 MERGED from [android.arch.lifecycle:runtime:1.0.0] /home/sid/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/9ec1b65d9ffa990da36530cc2401855b/AndroidManifest.xml:24:5-28:19
@@ -217,6 +227,8 @@ INJECTED from /home/sid/Projects/The-Second-R/thesecondr/android/app/src/main/An
 INJECTED from /home/sid/Projects/The-Second-R/thesecondr/android/app/src/main/AndroidManifest.xml
 MERGED from [:react-native-vector-icons] /home/sid/Projects/The-Second-R/thesecondr/node_modules/react-native-vector-icons/android/build/intermediates/manifests/full/debug/AndroidManifest.xml:7:5-9:41
 MERGED from [:react-native-vector-icons] /home/sid/Projects/The-Second-R/thesecondr/node_modules/react-native-vector-icons/android/build/intermediates/manifests/full/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:react-native-fast-image] /home/sid/Projects/The-Second-R/thesecondr/node_modules/react-native-fast-image/android/build/intermediates/manifests/full/debug/AndroidManifest.xml:8:5-10:41
+MERGED from [:react-native-fast-image] /home/sid/Projects/The-Second-R/thesecondr/node_modules/react-native-fast-image/android/build/intermediates/manifests/full/debug/AndroidManifest.xml:8:5-10:41
 MERGED from [com.facebook.react:react-native:0.56.0] /home/sid/.gradle/caches/transforms-1/files-1.1/react-native-0.56.0.aar/21172696b061d9aa26034aacd9514b16/AndroidManifest.xml:7:5-9:41
 MERGED from [com.facebook.react:react-native:0.56.0] /home/sid/.gradle/caches/transforms-1/files-1.1/react-native-0.56.0.aar/21172696b061d9aa26034aacd9514b16/AndroidManifest.xml:7:5-9:41
 MERGED from [com.android.support:appcompat-v7:26.1.0] /home/sid/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/20f351e1910bcc2ff007397869452ebc/AndroidManifest.xml:21:5-23:78
@@ -231,10 +243,6 @@ MERGED from [com.android.support.constraint:constraint-layout:1.1.2] /home/sid/.
 MERGED from [com.android.support.constraint:constraint-layout:1.1.2] /home/sid/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.2.aar/59b6036b0dd837b3f12a61e80f13ffc2/AndroidManifest.xml:5:5-7:41
 MERGED from [com.android.support:recyclerview-v7:26.1.0] /home/sid/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-26.1.0.aar/e8164f41d4d1a5935103252b5e8fce60/AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:recyclerview-v7:26.1.0] /home/sid/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-26.1.0.aar/e8164f41d4d1a5935103252b5e8fce60/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:animated-vector-drawable:26.1.0] /home/sid/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.1.0.aar/89933077f2432ebbe89387606a8a0c67/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:animated-vector-drawable:26.1.0] /home/sid/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.1.0.aar/89933077f2432ebbe89387606a8a0c67/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-vector-drawable:26.1.0] /home/sid/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-26.1.0.aar/de67747586239f47a6a3f4ff0bf7858e/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-vector-drawable:26.1.0] /home/sid/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-26.1.0.aar/de67747586239f47a6a3f4ff0bf7858e/AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-auth-api-phone:15.0.1] /home/sid/.gradle/caches/transforms-1/files-1.1/play-services-auth-api-phone-15.0.1.aar/4bdd9e77f2ac144646e791f29fb98ba0/AndroidManifest.xml:5:5-44
 MERGED from [com.google.android.gms:play-services-auth-api-phone:15.0.1] /home/sid/.gradle/caches/transforms-1/files-1.1/play-services-auth-api-phone-15.0.1.aar/4bdd9e77f2ac144646e791f29fb98ba0/AndroidManifest.xml:5:5-44
 MERGED from [com.google.android.gms:play-services-auth-base:15.1.0] /home/sid/.gradle/caches/transforms-1/files-1.1/play-services-auth-base-15.1.0.aar/52bab64cb68c201bf088750fa4ea62cb/AndroidManifest.xml:5:5-44
@@ -267,6 +275,14 @@ MERGED from [com.google.android.gms:play-services-basement:15.0.1] /home/sid/.gr
 MERGED from [com.google.android.gms:play-services-basement:15.0.1] /home/sid/.gradle/caches/transforms-1/files-1.1/play-services-basement-15.0.1.aar/2450bd77cc235333b60b79e2b8a7f264/AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:support-v4:26.1.0] /home/sid/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/b063d3a074d6527c7b09f9a0da09472f/AndroidManifest.xml:21:5-23:54
 MERGED from [com.android.support:support-v4:26.1.0] /home/sid/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/b063d3a074d6527c7b09f9a0da09472f/AndroidManifest.xml:21:5-23:54
+MERGED from [com.github.bumptech.glide:okhttp3-integration:4.7.1] /home/sid/.gradle/caches/transforms-1/files-1.1/okhttp3-integration-4.7.1.aar/45b06648665c23976c5964c275a1a6c7/AndroidManifest.xml:6:5-8:41
+MERGED from [com.github.bumptech.glide:okhttp3-integration:4.7.1] /home/sid/.gradle/caches/transforms-1/files-1.1/okhttp3-integration-4.7.1.aar/45b06648665c23976c5964c275a1a6c7/AndroidManifest.xml:6:5-8:41
+MERGED from [com.github.bumptech.glide:glide:4.7.1] /home/sid/.gradle/caches/transforms-1/files-1.1/glide-4.7.1.aar/1e1e184c4f8058d2229e61d49450333c/AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.bumptech.glide:glide:4.7.1] /home/sid/.gradle/caches/transforms-1/files-1.1/glide-4.7.1.aar/1e1e184c4f8058d2229e61d49450333c/AndroidManifest.xml:7:5-9:41
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] /home/sid/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.1.0.aar/89933077f2432ebbe89387606a8a0c67/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] /home/sid/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.1.0.aar/89933077f2432ebbe89387606a8a0c67/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:26.1.0] /home/sid/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-26.1.0.aar/de67747586239f47a6a3f4ff0bf7858e/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:26.1.0] /home/sid/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-26.1.0.aar/de67747586239f47a6a3f4ff0bf7858e/AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:support-fragment:26.1.0] /home/sid/.gradle/caches/transforms-1/files-1.1/support-fragment-26.1.0.aar/23e24dd04f857776079a2cf6b9776f29/AndroidManifest.xml:21:5-23:60
 MERGED from [com.android.support:support-fragment:26.1.0] /home/sid/.gradle/caches/transforms-1/files-1.1/support-fragment-26.1.0.aar/23e24dd04f857776079a2cf6b9776f29/AndroidManifest.xml:21:5-23:60
 MERGED from [com.android.support:support-core-ui:26.1.0] /home/sid/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.1.0.aar/1d88fde4def6768bd75af6a70523d4cb/AndroidManifest.xml:21:5-23:58
@@ -291,6 +307,8 @@ MERGED from [com.facebook.fresco:imagepipeline-base:1.9.0] /home/sid/.gradle/cac
 MERGED from [com.facebook.fresco:imagepipeline-base:1.9.0] /home/sid/.gradle/caches/transforms-1/files-1.1/imagepipeline-base-1.9.0.aar/c936a4ec4f7cbecaf6aa805da51d39ce/AndroidManifest.xml:5:5-7:41
 MERGED from [com.facebook.soloader:soloader:0.3.0] /home/sid/.gradle/caches/transforms-1/files-1.1/soloader-0.3.0.aar/81c42056bdad62631ffe2ccff3bb8c74/AndroidManifest.xml:7:5-9:41
 MERGED from [com.facebook.soloader:soloader:0.3.0] /home/sid/.gradle/caches/transforms-1/files-1.1/soloader-0.3.0.aar/81c42056bdad62631ffe2ccff3bb8c74/AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.bumptech.glide:gifdecoder:4.7.1] /home/sid/.gradle/caches/transforms-1/files-1.1/gifdecoder-4.7.1.aar/c2ae3233ab927edc54b404bbddd915f0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.github.bumptech.glide:gifdecoder:4.7.1] /home/sid/.gradle/caches/transforms-1/files-1.1/gifdecoder-4.7.1.aar/c2ae3233ab927edc54b404bbddd915f0/AndroidManifest.xml:5:5-7:41
 MERGED from [com.facebook.fresco:fbcore:1.9.0] /home/sid/.gradle/caches/transforms-1/files-1.1/fbcore-1.9.0.aar/bd2959c0298453f5fe33693ebad0fafc/AndroidManifest.xml:5:5-7:41
 MERGED from [com.facebook.fresco:fbcore:1.9.0] /home/sid/.gradle/caches/transforms-1/files-1.1/fbcore-1.9.0.aar/bd2959c0298453f5fe33693ebad0fafc/AndroidManifest.xml:5:5-7:41
 MERGED from [com.google.android.gms:play-services-measurement-base:16.0.0] /home/sid/.gradle/caches/transforms-1/files-1.1/play-services-measurement-base-16.0.0.aar/ebe0f6c994f3fd0528704c64b7e7a2f5/AndroidManifest.xml:20:5-44
@@ -313,12 +331,12 @@ meta-data#android.support.VERSION
 ADDED from [com.android.support:appcompat-v7:26.1.0] /home/sid/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/20f351e1910bcc2ff007397869452ebc/AndroidManifest.xml:26:9-28:38
 MERGED from [com.android.support:recyclerview-v7:26.1.0] /home/sid/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-26.1.0.aar/e8164f41d4d1a5935103252b5e8fce60/AndroidManifest.xml:23:9-25:38
 MERGED from [com.android.support:recyclerview-v7:26.1.0] /home/sid/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-26.1.0.aar/e8164f41d4d1a5935103252b5e8fce60/AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:support-v4:26.1.0] /home/sid/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/b063d3a074d6527c7b09f9a0da09472f/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-v4:26.1.0] /home/sid/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/b063d3a074d6527c7b09f9a0da09472f/AndroidManifest.xml:26:9-28:38
 MERGED from [com.android.support:animated-vector-drawable:26.1.0] /home/sid/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.1.0.aar/89933077f2432ebbe89387606a8a0c67/AndroidManifest.xml:23:9-25:38
 MERGED from [com.android.support:animated-vector-drawable:26.1.0] /home/sid/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.1.0.aar/89933077f2432ebbe89387606a8a0c67/AndroidManifest.xml:23:9-25:38
 MERGED from [com.android.support:support-vector-drawable:26.1.0] /home/sid/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-26.1.0.aar/de67747586239f47a6a3f4ff0bf7858e/AndroidManifest.xml:23:9-25:38
 MERGED from [com.android.support:support-vector-drawable:26.1.0] /home/sid/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-26.1.0.aar/de67747586239f47a6a3f4ff0bf7858e/AndroidManifest.xml:23:9-25:38
-MERGED from [com.android.support:support-v4:26.1.0] /home/sid/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/b063d3a074d6527c7b09f9a0da09472f/AndroidManifest.xml:26:9-28:38
-MERGED from [com.android.support:support-v4:26.1.0] /home/sid/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/b063d3a074d6527c7b09f9a0da09472f/AndroidManifest.xml:26:9-28:38
 MERGED from [com.android.support:support-fragment:26.1.0] /home/sid/.gradle/caches/transforms-1/files-1.1/support-fragment-26.1.0.aar/23e24dd04f857776079a2cf6b9776f29/AndroidManifest.xml:26:9-28:38
 MERGED from [com.android.support:support-fragment:26.1.0] /home/sid/.gradle/caches/transforms-1/files-1.1/support-fragment-26.1.0.aar/23e24dd04f857776079a2cf6b9776f29/AndroidManifest.xml:26:9-28:38
 MERGED from [com.android.support:support-core-ui:26.1.0] /home/sid/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.1.0.aar/1d88fde4def6768bd75af6a70523d4cb/AndroidManifest.xml:26:9-28:38
@@ -527,6 +545,12 @@ ADDED from [com.google.android.gms:play-services-basement:15.0.1] /home/sid/.gra
 		ADDED from [com.google.android.gms:play-services-basement:15.0.1] /home/sid/.gradle/caches/transforms-1/files-1.1/play-services-basement-15.0.1.aar/2450bd77cc235333b60b79e2b8a7f264/AndroidManifest.xml:25:13-66
 	android:name
 		ADDED from [com.google.android.gms:play-services-basement:15.0.1] /home/sid/.gradle/caches/transforms-1/files-1.1/play-services-basement-15.0.1.aar/2450bd77cc235333b60b79e2b8a7f264/AndroidManifest.xml:24:13-58
+meta-data#com.bumptech.glide.integration.okhttp3.OkHttpGlideModule
+ADDED from [com.github.bumptech.glide:okhttp3-integration:4.7.1] /home/sid/.gradle/caches/transforms-1/files-1.1/okhttp3-integration-4.7.1.aar/45b06648665c23976c5964c275a1a6c7/AndroidManifest.xml:11:9-13:43
+	android:value
+		ADDED from [com.github.bumptech.glide:okhttp3-integration:4.7.1] /home/sid/.gradle/caches/transforms-1/files-1.1/okhttp3-integration-4.7.1.aar/45b06648665c23976c5964c275a1a6c7/AndroidManifest.xml:13:13-40
+	android:name
+		ADDED from [com.github.bumptech.glide:okhttp3-integration:4.7.1] /home/sid/.gradle/caches/transforms-1/files-1.1/okhttp3-integration-4.7.1.aar/45b06648665c23976c5964c275a1a6c7/AndroidManifest.xml:12:13-84
 uses-permission#android.permission.READ_PHONE_STATE
 IMPLIED from /home/sid/Projects/The-Second-R/thesecondr/android/app/src/main/AndroidManifest.xml:2:1-47:12 reason: org.webkit.android_jsc has a targetSdkVersion < 4
 meta-data#android.arch.lifecycle.VERSION

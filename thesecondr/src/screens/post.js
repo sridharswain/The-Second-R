@@ -1,5 +1,6 @@
 import React from 'react';
-import {View,Text,ViewPagerAndroid,Image,ScrollView,StyleSheet} from 'react-native';
+import {View,Text,ViewPagerAndroid,Image,ScrollView,StyleSheet,AsyncStorage} from 'react-native';
+import FastImage from 'react-native-fast-image';
 import { get } from '../utils/request';
 import Styles from '../res/styles';
 import Button from '../components/Button';
@@ -25,15 +26,14 @@ export default class Post extends React.Component{
         this.imageLinks.forEach(element => {
             this.views.push(
                 <View>
-                    <Image source = {{uri : element}} style={{width : '100%',height : 250}} />
+                    <FastImage source = {{uri : element}} style={{width : '100%',height : 250}} />
                 </View>
             )
         });
     }
 
     getSellerInfo = () => {
-        console.log(this.props.data);
-        get('/getUserById',{id : this.props.data._id})
+        get('/getUserById',{id : this.props.data.userId})
         .then((response) => {
             console.log(response);
             if(response.error) alert("Seller Not Found");

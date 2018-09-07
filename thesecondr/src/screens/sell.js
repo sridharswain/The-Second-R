@@ -78,7 +78,7 @@ export default class Sell extends Component{
             const val = await AsyncStorage.getItem('userData');
             if(val !== null){
                 console.log(val);
-                return (JSON.parse(val)._id);
+                return (JSON.parse(val).id);
             }
             return null;
         }
@@ -88,8 +88,7 @@ export default class Sell extends Component{
     }
     accumulatePhoneDesc = () => {
         var desc = this.state.desc;
-        desc += "\n"
-        + "\nWarranty : " + isAvailable(this.state.warranty)
+        desc += "\nWarranty : " + isAvailable(this.state.warranty)
         + "\nEarphone : " + isAvailable(this.state.earphone)
         + "\nCharger : " + isAvailable(this.state.charger)
         + "\nManual : " + isAvailable(this.state.manual);
