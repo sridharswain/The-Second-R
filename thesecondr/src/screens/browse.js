@@ -1,5 +1,5 @@
 import React,{Component} from 'react';
-import {View,Text,Image,FlatList,StyleSheet,TouchableOpacity} from 'react-native';
+import {View,Text,Image,FlatList,StyleSheet,TouchableOpacity,AsyncStorage} from 'react-native';
 import {Actions} from 'react-native-router-flux';
 import FastImage from 'react-native-fast-image';
 import { get } from '../utils/request';
@@ -12,10 +12,17 @@ export default class Browse extends Component{
         this.state = {
             orders : []
         }
+        this.userId = '';
     }
 
     componentDidMount(){
         this.getAllAds();
+        this.getUserId();
+    }
+
+    getUserId = async () => {
+        this.userId = JSON.parse(await AsyncStorage.getItem("userData"))._id;
+        console.log(this.userId);
     }
 
     getAllAds = () => {
@@ -27,7 +34,7 @@ export default class Browse extends Component{
 
     renderItem = (item) => {
         return(
-            <TouchableOpacity onPress={() => Actions.post({data : item})}>
+            <TouchableOpacity onPress={() => Actions.post({data : item, isMyOrder : (item.userId == this.userId)})}>
                 <View style={styles.cardRoot}>
                     <FastImage source={{uri : item.imageLink[0]}} style={{height : 250, width : '100%'}}/>
                     <Text style={styles.cardTitleStyle}>{item.title}</Text>

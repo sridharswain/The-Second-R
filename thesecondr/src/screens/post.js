@@ -53,6 +53,15 @@ export default class Post extends React.Component{
         Caller.call(this.state.sellerPhone);
     }
 
+    handleButtonPress = () => {
+        if(this.props.isMyOrder){
+            //DELETE ORDER
+        }
+        else{
+            this.openDialer();
+        }
+    }
+
     render(){
         return(
             <View style={Styles.container}>
@@ -75,7 +84,7 @@ export default class Post extends React.Component{
                         </View>
                     </ScrollView>
                 </View>
-                <Button text="Call Seller" onPress={this.openDialer}/>
+                <Button text={(this.props.isMyOrder)?"Delete Order":"Call Seller"} onPress={this.handleButtonPress}/>
             </View>
         );
     }
