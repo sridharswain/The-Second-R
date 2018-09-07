@@ -1,5 +1,5 @@
 import React,{Component} from 'react';
-import {View,Text,StyleSheet,DatePickerAndroid, ListView, Image} from 'react-native';
+import {View,Text,StyleSheet,DatePickerAndroid, ListView, Image, AsyncStorage} from 'react-native';
 import CheckBox from '../components/CheckBox'; 
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
 import Moment from 'moment';
@@ -73,8 +73,19 @@ export default class Sell extends Component{
         );
     }
 
-    
-
+    getUserId = async () => {
+        try{
+            const val = await AsyncStorage.getItem('userData');
+            if(val !== null){
+                console.log(val);
+                return (JSON.parse(val)._id);
+            }
+            return null;
+        }
+        catch(ex){
+            console.log(ex);
+        }
+    }
     accumulatePhoneDesc = () => {
         var desc = this.state.desc;
         desc += "\n"
@@ -105,18 +116,21 @@ export default class Sell extends Component{
         let boughtDate = this.state.boughtDate;
         let description = this.accumulatePhoneDesc();
         let imageLink = this.remoteImages;
-        post('/postAd',{ title,imageLink,description,cost : 60})
-        .then((res) => {
-            if(res.err) alert("Failed");
-            else{
-                Toast.show("Ad Posted",Toast.LONG);
-                this.props.goto("Home");
-            }
+
+        this.getUserId().then((id) => {
+            post('/postAd',{ title,imageLink,description,cost : 60,userId : id})
+            .then((res) => {
+                if(res.err) alert("Failed");
+                else{
+                    Toast.show("Ad Posted",Toast.LONG);
+                    this.props.goto("Home");
+                }
+            });
         });
     }
 
     upload = (index) => {
-        if(index == -1 ) {
+        if(index == -1) {
             this.setState({showUploadingModal : false});
             this.handleAfterUpload();
             return;

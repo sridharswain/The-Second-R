@@ -1,5 +1,5 @@
 import React,{Component} from 'react';
-import {View,Dimensions,Image,Text,AppRegistry} from 'react-native';
+import {View,Dimensions,Image,Text,AppRegistry, AsyncStorage} from 'react-native';
 import {Actions} from 'react-native-router-flux';
 import {post} from '../utils/request';
 import Toast from '../utils/Toast'
@@ -35,12 +35,20 @@ export default class Login extends Component{
             email,
             password
         })
-        .then((res) => {
+        .then(async (res) => {
             if(res.error){
                 Toast.show(res.res,Toast.SHORT);
             }
             else{
                 //GO TO HOME CODE GOES HERE
+                console.log(res.res);
+                try{
+                    await AsyncStorage.setItem('userData',JSON.stringify(res.res));
+                    Actions.home();
+                }
+                catch(ex){
+                    console.log(ex);
+                }
             }
         });
     }

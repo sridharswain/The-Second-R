@@ -11,7 +11,7 @@ export default class TextInput extends Component{
 
                     <RTextInput
                         style={styles.inputText}
-                        onChangeText={this.props.onChangeText}
+                        onChangeText={(text) => this.props.onChangeText(text)}
                         placeholder={this.props.placeholder}
                         secureTextEntry={this.props.password}
                         multiline={this.props.multiline} 
