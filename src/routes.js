@@ -5,6 +5,7 @@ const postAd = require('./controllers/postAd');
 const getAds = require('./controllers/getAds');
 const getUserById = require('./controllers/getUserById');
 const googleSignIn = require('./controllers/googleSignin');
+const deleteOrder = require('./controllers/deleteOrder');
 const reply = require('./reply');
 
 module.exports = function(app,db){
@@ -67,4 +68,9 @@ module.exports = function(app,db){
     });
 
     //DELETE POST
+    app.get('/deleteOrder',(req, res) => {
+        deleteOrder(req.query.id,(err) => {
+            res.json(reply(err,"Done"));
+        });
+    });
 }
