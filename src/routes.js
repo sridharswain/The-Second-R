@@ -64,5 +64,7 @@ module.exports = function(app,db){
         googleSignIn(req.query.email,(err,data) => {
             res.json(reply(err,data));
         });
-    })
+    });
+
+    //DELETE POST
 }

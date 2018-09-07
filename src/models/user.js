@@ -15,10 +15,8 @@ var userSchema = mongoose.Schema({
     },
     orders : {
         type : [{
-            id : {
                 type : mongoose.Schema.Types.ObjectId,
                 ref : 'order'
-            }
         }],
         default : []
     }

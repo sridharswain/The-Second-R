@@ -1,4 +1,3 @@
-const mongoose = require("mongoose");
 var Order = require('../models/order');
 var User = require('../models/user');
 
@@ -12,9 +11,8 @@ module.exports = function(data,callback){
     });
 
     order.save((err,result) => {
-        /*User.findById(data.userId,(err,userData) => {
-            console.log(userData);
-        });*/
-        callback(err,result);
+        User.findByIdAndUpdate(data.userId,{$push : {orders : result._id}},{new : true},(err,newUserData) => {
+            callback(err,result);
+        });
     });
 }
