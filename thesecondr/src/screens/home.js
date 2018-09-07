@@ -122,6 +122,8 @@ const drawerStyles = StyleSheet.create({
     },
     headerText : {
         fontSize : 23,
-        marginLeft : 10
+        marginLeft : 10,
+        color:'black',
+        fontFamily : 'Ubuntu-Medium'
     }
   });

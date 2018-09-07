@@ -2,6 +2,7 @@ import React from 'react';
 import {View,Text,ViewPagerAndroid,Image,ScrollView,StyleSheet,AsyncStorage} from 'react-native';
 import FastImage from 'react-native-fast-image';
 import { get } from '../utils/request';
+import Caller from '../utils/Caller';
 import Styles from '../res/styles';
 import Button from '../components/Button';
 
@@ -48,6 +49,10 @@ export default class Post extends React.Component{
         })
     }
 
+    openDialer = () => {
+        Caller.call(this.state.sellerPhone);
+    }
+
     render(){
         return(
             <View style={Styles.container}>
@@ -60,16 +65,17 @@ export default class Post extends React.Component{
                     <ScrollView>
                         <View style={{paddingHorizontal : 20, paddingVertical : 10}}>
                             <Text style={styles.titleText}>{this.props.data.title}</Text>
-                            <Text style={[styles.titleText,{alignSelf : 'flex-start',fontSize : 20}]}>Description</Text>
+                            <Text style={[styles.titleText,{fontSize : 25}]}>{"Rs. "+this.props.data.cost}</Text>
+                            <Text style={[styles.titleText,{alignSelf : 'flex-start',fontSize : 20, marginTop : 20}]}>Description</Text>
                             <Text style={{fontSize : 15}}>{this.props.data.description}</Text>
-                            <Text style={[styles.titleText,{alignSelf : 'flex-start',fontSize : 20}]}>Seller Info.</Text>
+                            <Text style={[styles.titleText,{alignSelf : 'flex-start',fontSize : 20, marginTop : 20}]}>Seller Info.</Text>
                             <Text style={{fontSize : 15}}>{"Name : " + this.state.sellerName}</Text>
                             <Text style={{fontSize : 15}}>{"Email : " + this.state.sellerEmail}</Text>
                             <Text style={{fontSize : 15}}>{"Phone : " + this.state.sellerPhone}</Text>
                         </View>
                     </ScrollView>
                 </View>
-                <Button text={"BUY NOW FOR Rs. "+ this.props.data.cost}/>
+                <Button text="Call Seller" onPress={this.openDialer}/>
             </View>
         );
     }

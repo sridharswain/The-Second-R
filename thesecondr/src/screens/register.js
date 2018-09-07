@@ -29,25 +29,33 @@ export default class Register extends Component{
     constructor(props){
         super(props);
         this.state = {
-            currentPage : 1,
-            width : 0,
-            name : '',
-            email : '',
+            currentPage : ((this.props.email == null)?1:2),
+            name : this.props.userName || '',
+            email : this.props.email || '',
             password : '',
             rePassword : '',
             address : '',
             phone : '',
             isEmailChecking : false,
-            emailStatusImage : require('../res/images/cross_red.png'),
+            emailStatusImage : ((this.props.email == null )?require('../res/images/cross_red.png'):null),
             tick_green : require('../res/images/tick_green.png'),
             cross_red : require('../res/images/cross_red.png'),
-            isEmailWrong : true
+            isEmailWrong : (this.props.email == null)
         }
+        this.width = 0;
     }
 
     componentWillMount(){
         var window= Dimensions.get('window');
-        this.setState({width : window.width});
+        //this.setState({width : window.width});
+        this.width = window.width;
+    }
+
+    componentDidMount(){
+        if(this.props.email){
+            console.log(this.width);
+            setTimeout(()=> this.scrollForm.scrollTo({x: this.width, y: 0, animated: false}),30);
+        }
     }
 
     correctPersonalInfo(){
@@ -106,7 +114,7 @@ export default class Register extends Component{
                 break;
         }
         if(this.state.currentPage < 3){
-            this.scrollForm.scrollTo({x: this.state.currentPage*this.state.width, y: 0, animated: true})
+            this.scrollForm.scrollTo({x: this.state.currentPage*this.width, y: 0, animated: true})
             this.setState({currentPage : this.state.currentPage+1});
         }
     }
@@ -139,6 +147,7 @@ export default class Register extends Component{
     }
 
     render(){
+        console.log("Render");
         return(
             <KeyboardAwareScrollView
                 showsVerticalScrollIndicator={false}>
@@ -154,10 +163,11 @@ export default class Register extends Component{
                         horizontal={true}
                         showsHorizontalScrollIndicator={false}>
 
-                        <View style={[{width : this.state.width},styles.pageStyle]}>
+                        <View style={[{width : this.width},styles.pageStyle]}>
                             <TextInput
                                 leftImage = {require('../res/images/user.png')}
                                 placeholder="Name"
+                                text={this.state.name}
                                 onChangeText={(name)=>this.setState({name})}/>
                             <View style={{flex:1, flexDirection : 'row'}}>
                                 <TextInput
@@ -165,12 +175,13 @@ export default class Register extends Component{
                                     style={{marginTop : 10}}
                                     leftImage = {require('../res/images/mail.png')}
                                     placeholder="Email"
+                                    text={this.state.email}
                                     onChangeText={(email)=> {this.setState({email}); this.checkEmailAvailablity(email)}}/>
                                 {this.emailCheckImage()}
                             </View>
                         </View>
 
-                        <View style={[{width : this.state.width},styles.pageStyle]}>
+                        <View style={[{width : this.width},styles.pageStyle]}>
                             <TextInput                     
                                 leftImage = {require('../res/images/locked.png')}
                                 placeholder="Password"
@@ -184,7 +195,7 @@ export default class Register extends Component{
                                 password/>
                         </View>
 
-                        <View style={[{width : this.state.width},styles.pageStyle]}>
+                        <View style={[{width : this.width},styles.pageStyle]}>
                             <TextInput
                                 leftImage = {require('../res/images/phone.png')}
                                 placeholder = 'Phone'
