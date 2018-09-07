@@ -4,6 +4,7 @@ const checkEmailAvailable = require('./controllers/checkEmailAvailable');
 const postAd = require('./controllers/postAd');
 const getAds = require('./controllers/getAds');
 const getUserById = require('./controllers/getUserById');
+const googleSignIn = require('./controllers/googleSignin');
 const reply = require('./reply');
 
 module.exports = function(app,db){
@@ -57,4 +58,11 @@ module.exports = function(app,db){
             else res.json(reply(false,data));
         })
     });
+
+    //CHECK GOOGLE SIGNIN
+    app.get('/googleSignIn',(req,res) => {
+        googleSignIn(req.query.email,(err,data) => {
+            res.json(reply(err,data));
+        });
+    })
 }
