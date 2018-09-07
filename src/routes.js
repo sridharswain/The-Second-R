@@ -3,6 +3,7 @@ const login = require('./controllers/login');
 const checkEmailAvailable = require('./controllers/checkEmailAvailable');
 const postAd = require('./controllers/postAd');
 const getAds = require('./controllers/getAds');
+const getUserById = require('./controllers/getUserById');
 const reply = require('./reply');
 
 module.exports = function(app,db){
@@ -38,7 +39,7 @@ module.exports = function(app,db){
     app.post('/postAd',(req,res) => {
         postAd(req.body,(err,data) => {
             if(err) res.json(reply(true,"Failed"));
-            else res.json(reply(false,"Succeed"))
+            else res.json(reply(false,"Success"));
         });
     });
 
@@ -47,5 +48,13 @@ module.exports = function(app,db){
         getAds(req.query,(err,data) => {
             res.json(reply(err,data));
         });
+    });
+
+    //GET USER INFO WITH ID AS QUERY.
+    app.get('/getUserById',(req,res) => {
+        getUserById(req.query.id,(err,data) => {
+            if(err) res.json(reply(true,"User Not Found"));
+            else res.json(reply(false,data));
+        })
     });
 }

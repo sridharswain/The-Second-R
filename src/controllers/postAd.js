@@ -7,7 +7,8 @@ module.exports = function(data,callback){
         title : data.title,
         cost : data.cost,
         description : data.description,
-        imageLink : data.imageLink
+        imageLink : data.imageLink,
+        userId : data.userId
     });
 
     order.save((err,result) => {
