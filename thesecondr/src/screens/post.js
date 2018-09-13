@@ -1,6 +1,7 @@
 import React from 'react';
 import {View,Text,ViewPagerAndroid,Image,ScrollView,StyleSheet,AsyncStorage} from 'react-native';
 import FastImage from 'react-native-fast-image';
+import { Actions } from 'react-native-router-flux';
 import { get } from '../utils/request';
 import Caller from '../utils/Caller';
 import Styles from '../res/styles';
@@ -34,6 +35,7 @@ export default class Post extends React.Component{
     }
 
     getSellerInfo = () => {
+        console.log(this.props.data);
         get('/getUserById',{id : this.props.data.userId})
         .then((response) => {
             console.log(response);
@@ -56,6 +58,14 @@ export default class Post extends React.Component{
     handleButtonPress = () => {
         if(this.props.isMyOrder){
             //DELETE ORDER
+            get('/deleteOrder',{id : this.props.data._id})
+            .then((response) => {
+                if(response.error) alert("Couldn't delete Ad");
+                else{
+                    Actions.pop();
+                }
+            });
+
         }
         else{
             this.openDialer();

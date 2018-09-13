@@ -17,6 +17,7 @@ import Toast from '../utils/Toast';
 const isAvailable = (val) => {
     return (val ? "Available" : "Not Available");
 }
+
 export default class Sell extends Component{
 
     constructor(props){
@@ -30,6 +31,7 @@ export default class Sell extends Component{
             showUploadingModal : false,
             category : null,
             boughtDate : "Bought Date",
+            cost : 0,
             title : '',
             charger : false,
             earphone : false,
@@ -38,7 +40,6 @@ export default class Sell extends Component{
             desc : '',
             imageDataSource : (this.imgDataSource.cloneWithRows([]))
         }
-        
     }
 
     async handleDatePicker() {
@@ -62,23 +63,12 @@ export default class Sell extends Component{
         return ((category == this.state.category) ? Colors.disabledGrey : 'white');
     }
 
-    phoneForm = () => {
-        return(
-            <View >
-                <TextInput style={styles.formTextStyle} placeholder="Product Name" 
-                        leftImage = {require('../res/images/name.png')}/>
-                <TextInput style={styles.formTextStyle} placeholder="Product Name" 
-                        leftImage = {require('../res/images/name.png')}/>
-            </View>
-        );
-    }
-
     getUserId = async () => {
         try{
             const val = await AsyncStorage.getItem('userData');
             if(val !== null){
                 console.log(val);
-                return (JSON.parse(val).id);
+                return (JSON.parse(val)._id);
             }
             return null;
         }
@@ -86,6 +76,7 @@ export default class Sell extends Component{
             console.log(ex);
         }
     }
+
     accumulatePhoneDesc = () => {
         var desc = this.state.desc;
         desc += "\nWarranty : " + isAvailable(this.state.warranty)
@@ -98,7 +89,7 @@ export default class Sell extends Component{
     imgItem = (data) => {
         return(
             <View style={{padding : 5}}>
-                <Image source = {{uri : "file://"+data}} style={{width : 50,height : 50}}/>
+                <Image source = {{uri : "file://" + data}} style={{width : 50,height : 50}}/>
             </View>
         );
     }
@@ -115,9 +106,9 @@ export default class Sell extends Component{
         let boughtDate = this.state.boughtDate;
         let description = this.accumulatePhoneDesc();
         let imageLink = this.remoteImages;
-
+        let cost = this.state.cost;
         this.getUserId().then((id) => {
-            post('/postAd',{ title,imageLink,description,cost : 60,userId : id})
+            post('/postAd',{ title,imageLink,description,cost,userId : id})
             .then((res) => {
                 if(res.err) alert("Failed");
                 else{
@@ -157,6 +148,7 @@ export default class Sell extends Component{
         this.setState({showUploadingModal : true, toUploadNum : 0},() => {
             this.upload(this.images.length - 1);
         });
+        
     }
     
     render(){
@@ -164,35 +156,6 @@ export default class Sell extends Component{
             <View style={[Styles.container,styles.root]}>
             <UploadModal visible={this.state.showUploadingModal}>{this.state.toUploadNum +"/"+this.images.length+ " Images Uploaded"}</UploadModal>
             <ImagePicker visible={this.state.showImagePicker} onResult = {this.handleImagePicker}/>
-                <View style={styles.categoryRoot}>
-                    <View style={styles.categoryContainer}>
-                        <CircleIcon source={require('../res/images/smartphone.png')}
-                            onPress={() => this.handleCategorySelection("phone")}
-                            select={(this.state.category == "phone")}>
-                            Phones
-                        </CircleIcon>
-                        <CircleIcon source={require('../res/images/notebook.png')} 
-                            onPress={() => this.handleCategorySelection("book")}
-                            select={(this.state.category == "book")}>
-                            Books
-                        </CircleIcon>
-                        <CircleIcon source={require('../res/images/desk.png')} 
-                            onPress={() => this.handleCategorySelection("furniture")}
-                            select={(this.state.category == "furniture")}>
-                            Furniture
-                        </CircleIcon>
-                        <CircleIcon source={require('../res/images/bicycle.png')} 
-                            onPress={() => this.handleCategorySelection("vehicle")} 
-                            select={(this.state.category == "vehicle")}>
-                            Vehicle
-                        </CircleIcon>
-                    </View>
-                    {
-                        (this.state.category == null) 
-                            ? (<Text style={{marginTop : 20, fontWeight : 'bold'}}>Select a category to continue</Text>)
-                            : null
-                    }
-                </View>
 
                 <View style={styles.frameRoot}>
                     <KeyboardAwareScrollView>
@@ -206,6 +169,12 @@ export default class Sell extends Component{
                                         onPress = {() => this.handleDatePicker()}
                                         text = {this.state.boughtDate}
                                         disabled/>
+                                
+                                <TextInput style={styles.formTextStyle} placeholder="Selling Price"
+                                    leftImage={require('../res/images/rupee.png')}
+                                    onChangeText = {(cost) => this.setState({cost : parseInt(cost)})}
+                                    keyboardType = "numeric"
+                                    multiline />
                                 
                                 <View style={styles.phoneDescStyle}>
                                     <CheckBox title="Charger"

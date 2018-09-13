@@ -17,7 +17,8 @@ export default class TextInput extends Component{
                         multiline={this.props.multiline} 
                         editable={!this.props.disabled}
                         selectTextOnFocus={!this.props.disabled}
-                        value={this.props.text} />
+                        value={this.props.text}
+                        keyboardType={(this.props.keyboardType)?this.props.keyboardType:'default'} />
                     
                 </View>
             </TouchableWithoutFeedback>
