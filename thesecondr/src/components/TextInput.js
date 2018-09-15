@@ -11,13 +11,14 @@ export default class TextInput extends Component{
 
                     <RTextInput
                         style={styles.inputText}
-                        onChangeText={this.props.onChangeText}
+                        onChangeText={(text) => this.props.onChangeText(text)}
                         placeholder={this.props.placeholder}
                         secureTextEntry={this.props.password}
                         multiline={this.props.multiline} 
                         editable={!this.props.disabled}
                         selectTextOnFocus={!this.props.disabled}
-                        value={this.props.text} />
+                        value={this.props.text}
+                        keyboardType={(this.props.keyboardType)?this.props.keyboardType:'default'} />
                     
                 </View>
             </TouchableWithoutFeedback>

@@ -1,5 +1,5 @@
 import React,{Component} from 'react';
-import {StyleSheet,Image,View,Text,TouchableOpacity} from 'react-native';
+import {StyleSheet,Image,View,Text,TouchableOpacity,AsyncStorage} from 'react-native';
 import Drawer from 'react-native-drawer';
 import {Actions} from 'react-native-router-flux';
 import Styles from '../res/styles';
@@ -15,10 +15,10 @@ export default class Home extends Component{
 
     constructor(props){
         super(props);
-        this.browse = (<Browse />);
-        this.sell = (<Sell />);
-        this.orders = (<Orders />);
-        this.profile = (<Profile />);
+        this.browse = (<Browse goto={this.gotoByHeader}/>);
+        this.sell = (<Sell goto={this.gotoByHeader}/>);
+        this.orders = (<Orders goto={this.gotoByHeader}/>);
+        this.profile = (<Profile goto={this.gotoByHeader}/>);
         this.state = {
             currentPage : this.browse,
             header : 'Home',
@@ -26,8 +26,34 @@ export default class Home extends Component{
         }
     }
 
-    logout = () => {
+    logout = async () => {
         //LOGOUT CODE GOES HERE
+        try{
+            await AsyncStorage.removeItem('userData',(err) => {
+                console.log(err);
+            });
+            Actions.splash({type : 'replace' });
+        }
+        catch(ex){
+            console.log(ex);
+        }
+    }
+
+    gotoByHeader = (header) => {
+        switch(header){
+            case 'Home':
+                this.goto(this.browse,header);
+                break;
+            case 'Sell':
+                this.goto(this.sell,header);
+                break;
+            case 'My Orders':
+                this.goto(this.orders,header);
+                break;
+            case 'My Profile':
+                this.goto(this.profile,header);
+                break;
+        }
     }
 
     goto = (screen,header) =>{
@@ -50,33 +76,33 @@ export default class Home extends Component{
                 </TouchableOpacity>
                 <Text style={drawerStyles.headerText}>{this.state.header}</Text>
             </View>
-            <Drawer
-                tapToClose
-                panOpenMask = {0.07}
-                panCloseMask = {0.07}
-                negotiatePan={true}
-                captureGestures={true}
-                type="displace"
-                side = 'left'
-                onClose = {() => this.setState({isDrawerOpen : false})}
-                onOpen = {() => this.setState({isDrawerOpen : true})}
-                styles={drawerStyles}
-                ref = {(ref) => this.drawer = ref}
-                content={(
-                <Menu>
-                    <MenuText source={require('../res/images/search.png')} onPress={() => this.goto(this.browse,"Home")}>Home</MenuText>
-                    <MenuText source={require('../res/images/trade.png')} onPress={() => this.goto(this.sell,"Sell")}>Sell</MenuText>
-                    <MenuText source={require('../res/images/orders.png')} onPress={() => this.goto(this.orders,"My Orders")}>My Orders</MenuText>
-                    <MenuText source={require('../res/images/personal.png')} onPress={() => this.goto(this.profile,"My Profile")}>My Profile</MenuText>
-                    <MenuText source={require('../res/images/logout.png')} onPress={this.logout}>Logout</MenuText>
-                </Menu>
-                )}
-                openDrawerOffset={0.4}
-                tweenHandler={(ratio) => ({
-                    main: { opacity: Math.max(0.1,(1-ratio)) }
-                  })}>
-                {this.state.currentPage}
-            </Drawer>
+                <Drawer
+                    tapToClose
+                    panOpenMask = {0.07}
+                    panCloseMask = {0.07}
+                    negotiatePan={true}
+                    captureGestures={true}
+                    type="displace"
+                    side = 'left'
+                    onClose = {() => this.setState({isDrawerOpen : false})}
+                    onOpen = {() => this.setState({isDrawerOpen : true})}
+                    styles={drawerStyles}
+                    ref = {(ref) => this.drawer = ref}
+                    content={(
+                        <Menu>
+                            <MenuText source={require('../res/images/search.png')} onPress={() => this.goto(this.browse,"Home")}>Home</MenuText>
+                            <MenuText source={require('../res/images/trade.png')} onPress={() => this.goto(this.sell,"Sell")}>Sell</MenuText>
+                            <MenuText source={require('../res/images/orders.png')} onPress={() => this.goto(this.orders,"My Orders")}>My Orders</MenuText>
+                            <MenuText source={require('../res/images/personal.png')} onPress={() => this.goto(this.profile,"My Profile")}>My Profile</MenuText>
+                            <MenuText source={require('../res/images/logout.png')} onPress={this.logout}>Logout</MenuText>
+                        </Menu>
+                    )}
+                    openDrawerOffset={0.4}
+                    tweenHandler={(ratio) => ({
+                        main: { opacity: Math.max(0.1,(1-ratio)) }
+                    })}>
+                    {this.state.currentPage}
+                </Drawer>
             </View>
         );
     }
@@ -96,6 +122,8 @@ const drawerStyles = StyleSheet.create({
     },
     headerText : {
         fontSize : 23,
-        marginLeft : 10
+        marginLeft : 10,
+        color:'black',
+        fontFamily : 'Ubuntu-Medium'
     }
   });

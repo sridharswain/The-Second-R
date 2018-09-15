@@ -14,7 +14,7 @@ export default class ImagePicker extends Component{
             <View>
                 <Modal isVisible={this.props.visible} animationIn = "slideInUp" 
                     onBackdropPress={() => this.props.onResult(true,"Canceled")}>
-                    <View style={{backgroundColor : 'white',alignItems:'center',padding : 10, borderRadius:10}}>
+                    <View style={{backgroundColor : 'white', alignItems:'center',padding : 10, borderRadius:10}}>
                         <Button text="Pick Image from Files" style={styles.button}
                             onPress={() => {
                                 ImageSelector.select((err,result) => {
@@ -22,11 +22,11 @@ export default class ImagePicker extends Component{
                                 });
                             }}/>
                         <Button text="Capture from Camera" style={styles.button}
-                        onPress={() => {
-                            Camera.capture((err,result) => {
-                                this.props.onResult(err,result)
-                            }); 
-                        }}/>
+                            onPress={() => {
+                                Camera.capture((err,result) => {
+                                    this.props.onResult(err,result)
+                                }); 
+                            }}/>
                     </View>
                 </Modal>
             </View>

@@ -1,6 +1,7 @@
 import React,{Component} from 'react';
-import {View,Text,Image,Animated} from 'react-native';
+import {View,Image,Animated, AsyncStorage, TouchableOpacity} from 'react-native';
 import {Actions} from 'react-native-router-flux';
+import { get } from '../utils/request';
 import Button from '../components/Button';
 import Styles from '../res/styles';
 import Logo from '../components/Logo';
@@ -34,7 +35,11 @@ export default class Splash extends Component{
 
     componentDidMount(){
         this.fadeIn(this.state.logoFadeValue,1000,()=>{
-            this.fadeIn(this.state.loginAnimValue,500);
+            this.checkUserAlreadyLogin()
+            .then((available) => {
+                if(available) Actions.home({type : 'replace'});
+                else this.fadeIn(this.state.loginAnimValue,500);
+            })
         });
     }
 
@@ -42,10 +47,33 @@ export default class Splash extends Component{
         Actions.login();
     }
 
+    checkUserAlreadyLogin = async () => {
+        try{
+            const val = await AsyncStorage.getItem('userData');
+            return (val !== null);
+        }
+        catch(ex){
+            console.log(ex);
+        }
+        return false;
+    }
+
     onGoogleSignInPress = () => {
         GoogleSignIn.signin((name,email) => {
             console.log(email+" "+name);
-            //REGISTER OR LOGIN WITH GOOGLE GOES HERE
+            get('/googleSignIn', { email })
+            .then(async (response) => {
+                if(response.error) Actions.register({email, userName : name});
+                else{
+                    try{
+                        await AsyncStorage.setItem('userData',JSON.stringify(response.res));
+                        Actions.home();
+                    }
+                    catch(ex){
+                        console.log(ex);
+                    }
+                }
+            });
         });
     }
 
@@ -53,7 +81,7 @@ export default class Splash extends Component{
         return(
             <View style={{flex:1}}>
 
-                <Animated.View style={[{opacity : this.state.logoFadeValue,flex:1},Styles.center]}>
+                <Animated.View style={[{opacity : this.state.logoFadeValue, flex:1},Styles.center]}>
 
                         <Logo />
 
@@ -63,7 +91,9 @@ export default class Splash extends Component{
 
                     <View 
                         style={{flexDirection: 'row',justifyContent:'space-evenly',alignItems:'center',marginBottom:50}}>
-                        <Image source = {require("../res/images/google.png")} style={Styles.socialIcons}/>
+                        <TouchableOpacity onPress = {this.onGoogleSignInPress}>
+                            <Image source = {require("../res/images/google.png")} style={Styles.socialIcons}/>
+                        </TouchableOpacity>
                         <Image source = {require("../res/images/facebook.png")} style={Styles.socialIcons}/>
                     </View>
                 

@@ -22,6 +22,7 @@ public class NativeModulePackages implements ReactPackage {
         modules.add(new CaptureImage(reactContext));
         modules.add(new SelectImage(reactContext));
         modules.add(new ImageUploader(reactContext));
+        modules.add(new Caller(reactContext));
         return modules;
     }
 

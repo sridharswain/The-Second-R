@@ -1,8 +1,9 @@
 import React,{Component} from 'react';
-import {View,Text,StyleSheet,DatePickerAndroid, ListView, Image} from 'react-native';
+import {View,Text,StyleSheet,DatePickerAndroid, ListView, Image, AsyncStorage} from 'react-native';
 import CheckBox from '../components/CheckBox'; 
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
 import Moment from 'moment';
+import { post } from '../utils/request';
 import ImageUploader from '../utils/Uploader';
 import Styles from '../res/styles';
 import Colors from '../res/colors';
@@ -11,10 +12,12 @@ import CircleIcon from '../components/CircleIcon';
 import Button from '../components/Button';
 import ImagePicker from '../components/ImagePicker';
 import UploadModal from '../components/UploadModal';
+import Toast from '../utils/Toast';
 
 const isAvailable = (val) => {
     return (val ? "Available" : "Not Available");
 }
+
 export default class Sell extends Component{
 
     constructor(props){
@@ -28,7 +31,8 @@ export default class Sell extends Component{
             showUploadingModal : false,
             category : null,
             boughtDate : "Bought Date",
-            model : '',
+            cost : 0,
+            title : '',
             charger : false,
             earphone : false,
             manual : false,
@@ -36,7 +40,6 @@ export default class Sell extends Component{
             desc : '',
             imageDataSource : (this.imgDataSource.cloneWithRows([]))
         }
-        
     }
 
     async handleDatePicker() {
@@ -60,33 +63,33 @@ export default class Sell extends Component{
         return ((category == this.state.category) ? Colors.disabledGrey : 'white');
     }
 
-    phoneForm = () => {
-        return(
-            <View >
-                <TextInput style={styles.formTextStyle} placeholder="Product Name" 
-                        leftImage = {require('../res/images/name.png')}/>
-                <TextInput style={styles.formTextStyle} placeholder="Product Name" 
-                        leftImage = {require('../res/images/name.png')}/>
-            </View>
-        );
+    getUserId = async () => {
+        try{
+            const val = await AsyncStorage.getItem('userData');
+            if(val !== null){
+                console.log(val);
+                return (JSON.parse(val)._id);
+            }
+            return null;
+        }
+        catch(ex){
+            console.log(ex);
+        }
     }
-
-    
 
     accumulatePhoneDesc = () => {
         var desc = this.state.desc;
-        desc += '\n'
-        + "Warranty : " + isAvailable(this.state.warranty)
-        + "Earphone : " + isAvailable(this.state.earphone)
-        + "Charger : " + isAvailable(this.state.charger)
-        + "Manual : " + isAvailable(this.state.manual);
-        this.setState({desc});
+        desc += "\nWarranty : " + isAvailable(this.state.warranty)
+        + "\nEarphone : " + isAvailable(this.state.earphone)
+        + "\nCharger : " + isAvailable(this.state.charger)
+        + "\nManual : " + isAvailable(this.state.manual);
+        return desc;
     }
 
     imgItem = (data) => {
         return(
             <View style={{padding : 5}}>
-                <Image source = {{uri : "file://"+data}} style={{width : 50,height : 50}}/>
+                <Image source = {{uri : "file://" + data}} style={{width : 50,height : 50}}/>
             </View>
         );
     }
@@ -98,17 +101,36 @@ export default class Sell extends Component{
         this.setState({imageDataSource : this.imgDataSource.cloneWithRows(this.images)});
     }
 
+    handleAfterUpload = () => {
+        let title = this.state.title;
+        let boughtDate = this.state.boughtDate;
+        let description = this.accumulatePhoneDesc();
+        let imageLink = this.remoteImages;
+        let cost = this.state.cost;
+        this.getUserId().then((id) => {
+            post('/postAd',{ title,imageLink,description,cost,userId : id})
+            .then((res) => {
+                if(res.err) alert("Failed");
+                else{
+                    Toast.show("Ad Posted",Toast.LONG);
+                    this.props.goto("Home");
+                }
+            });
+        });
+    }
+
     upload = (index) => {
-        if(index == -1 ) {
+        if(index == -1) {
             this.setState({showUploadingModal : false});
+            this.handleAfterUpload();
             return;
         }
         ImageUploader.upload(this.images[index],(err,result) => {
-            console.log(err);
             if(!err){
                 this.remoteImages.push(result);
-                this.upload(index-1);
-                this.setState({ toUploadNum : this.state.toUploadNum + 1 });
+                this.setState({ toUploadNum : this.state.toUploadNum + 1 },() => {
+                    this.upload(index-1);
+                });
             }
             else{
                 alert("Failed");
@@ -126,42 +148,14 @@ export default class Sell extends Component{
         this.setState({showUploadingModal : true, toUploadNum : 0},() => {
             this.upload(this.images.length - 1);
         });
+        
     }
     
     render(){
         return (
             <View style={[Styles.container,styles.root]}>
-            <UploadModal visible={this.state.showUploadingModal}>{this.state.toUploadNum + " Images Uploaded"}</UploadModal>
+            <UploadModal visible={this.state.showUploadingModal}>{this.state.toUploadNum +"/"+this.images.length+ " Images Uploaded"}</UploadModal>
             <ImagePicker visible={this.state.showImagePicker} onResult = {this.handleImagePicker}/>
-                <View style={styles.categoryRoot}>
-                    <View style={styles.categoryContainer}>
-                        <CircleIcon source={require('../res/images/smartphone.png')}
-                            onPress={() => this.handleCategorySelection("phone")}
-                            select={(this.state.category == "phone")}>
-                            Phones
-                        </CircleIcon>
-                        <CircleIcon source={require('../res/images/notebook.png')} 
-                            onPress={() => this.handleCategorySelection("book")}
-                            select={(this.state.category == "book")}>
-                            Books
-                        </CircleIcon>
-                        <CircleIcon source={require('../res/images/desk.png')} 
-                            onPress={() => this.handleCategorySelection("furniture")}
-                            select={(this.state.category == "furniture")}>
-                            Furniture
-                        </CircleIcon>
-                        <CircleIcon source={require('../res/images/bicycle.png')} 
-                            onPress={() => this.handleCategorySelection("vehicle")} 
-                            select={(this.state.category == "vehicle")}>
-                            Vehicle
-                        </CircleIcon>
-                    </View>
-                    {
-                        (this.state.category == null) 
-                            ? (<Text style={{marginTop : 20, fontWeight : 'bold'}}>Select a category to continue</Text>)
-                            : null
-                    }
-                </View>
 
                 <View style={styles.frameRoot}>
                     <KeyboardAwareScrollView>
@@ -169,12 +163,18 @@ export default class Sell extends Component{
                             <View>
                                 <TextInput style={styles.formTextStyle} placeholder="Product Model" 
                                         leftImage = {require('../res/images/name.png')}
-                                        onChangeText = {(model) => this.setState({model})}/>
+                                        onChangeText = {(title) => this.setState({title})}/>
                                 <TextInput style={styles.formTextStyle} placeholder="Product Model" 
                                         leftImage = {require('../res/images/calendar.png')}
                                         onPress = {() => this.handleDatePicker()}
                                         text = {this.state.boughtDate}
                                         disabled/>
+                                
+                                <TextInput style={styles.formTextStyle} placeholder="Selling Price"
+                                    leftImage={require('../res/images/rupee.png')}
+                                    onChangeText = {(cost) => this.setState({cost : parseInt(cost)})}
+                                    keyboardType = "numeric"
+                                    multiline />
                                 
                                 <View style={styles.phoneDescStyle}>
                                     <CheckBox title="Charger"
