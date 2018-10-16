@@ -3,33 +3,13 @@
 
     <item
         is-multidex="false"
-        jar="/home/sid/.gradle/caches/transforms-1/files-1.1/soloader-0.3.0.aar/81c42056bdad62631ffe2ccff3bb8c74/jars/classes.jar"
-        jumboMode="false"
-        min-sdk-version="16"
-        optimize="true"
-        revision="26.0.3"
-        sha1="9803a14716e9f462afb5742811f3456c39f3be3a">
-        <dex dex="/home/sid/Projects/The-Second-R/thesecondr/android/app/build/intermediates/transforms/preDex/release/40.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/sid/.gradle/caches/transforms-1/files-1.1/play-services-auth-api-phone-15.0.1.aar/4bdd9e77f2ac144646e791f29fb98ba0/jars/classes.jar"
-        jumboMode="false"
-        min-sdk-version="16"
-        optimize="true"
-        revision="26.0.3"
-        sha1="7c9f3ed917984af2e50b56f65f0398c9e5756035">
-        <dex dex="/home/sid/Projects/The-Second-R/thesecondr/android/app/build/intermediates/transforms/preDex/release/11.jar" />
-    </item>
-    <item
-        is-multidex="false"
         jar="/home/sid/.gradle/caches/transforms-1/files-1.1/play-services-auth-base-15.1.0.aar/52bab64cb68c201bf088750fa4ea62cb/jars/classes.jar"
         jumboMode="false"
         min-sdk-version="16"
         optimize="true"
         revision="26.0.3"
         sha1="069291d23adfb15086d474acb9584392616e91c3">
-        <dex dex="/home/sid/Projects/The-Second-R/thesecondr/android/app/build/intermediates/transforms/preDex/release/12.jar" />
+        <dex dex="/home/sid/Projects/The-Second-R/thesecondr/android/app/build/intermediates/transforms/preDex/release/10.jar" />
     </item>
     <item
         is-multidex="false"
@@ -39,7 +19,7 @@
         optimize="true"
         revision="26.0.3"
         sha1="651276524a6892465688d2920f28072f4b35c6e7">
-        <dex dex="/home/sid/Projects/The-Second-R/thesecondr/android/app/build/intermediates/transforms/preDex/release/13.jar" />
+        <dex dex="/home/sid/Projects/The-Second-R/thesecondr/android/app/build/intermediates/transforms/preDex/release/11.jar" />
     </item>
     <item
         is-multidex="false"
@@ -63,13 +43,23 @@
     </item>
     <item
         is-multidex="false"
+        jar="/home/sid/.gradle/caches/transforms-1/files-1.1/okhttp3-integration-4.7.1.aar/45b06648665c23976c5964c275a1a6c7/jars/classes.jar"
+        jumboMode="false"
+        min-sdk-version="16"
+        optimize="true"
+        revision="26.0.3"
+        sha1="8b7dc6a88c522a34c342c208dbb7b8c912250245">
+        <dex dex="/home/sid/Projects/The-Second-R/thesecondr/android/app/build/intermediates/transforms/preDex/release/25.jar" />
+    </item>
+    <item
+        is-multidex="false"
         jar="/home/sid/.gradle/caches/transforms-1/files-1.1/fbcore-1.9.0.aar/bd2959c0298453f5fe33693ebad0fafc/jars/classes.jar"
         jumboMode="false"
         min-sdk-version="16"
         optimize="true"
         revision="26.0.3"
         sha1="ae15c560bc6685007440d8a70686f8348bafd791">
-        <dex dex="/home/sid/Projects/The-Second-R/thesecondr/android/app/build/intermediates/transforms/preDex/release/48.jar" />
+        <dex dex="/home/sid/Projects/The-Second-R/thesecondr/android/app/build/intermediates/transforms/preDex/release/53.jar" />
     </item>
     <item
         is-multidex="false"
@@ -90,26 +80,6 @@
         revision="26.0.3"
         sha1="e7a850c25a7efbd533c496ab482c980fdafac58d">
         <dex dex="/home/sid/Projects/The-Second-R/thesecondr/android/app/build/intermediates/transforms/preDex/release/1.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/sid/.gradle/caches/transforms-1/files-1.1/play-services-measurement-base-16.0.0.aar/ebe0f6c994f3fd0528704c64b7e7a2f5/jars/classes.jar"
-        jumboMode="false"
-        min-sdk-version="16"
-        optimize="true"
-        revision="26.0.3"
-        sha1="6ff520d5283b90ff4bb3db6b82298c3f1acd220b">
-        <dex dex="/home/sid/Projects/The-Second-R/thesecondr/android/app/build/intermediates/transforms/preDex/release/49.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/sid/.gradle/caches/transforms-1/files-1.1/imagepipeline-okhttp3-1.9.0.aar/4e1de5f5b2810a32f1a188ba6371d643/jars/classes.jar"
-        jumboMode="false"
-        min-sdk-version="16"
-        optimize="true"
-        revision="26.0.3"
-        sha1="dc6c0959ecc7b21932675183573b2bcecf2687b9">
-        <dex dex="/home/sid/Projects/The-Second-R/thesecondr/android/app/build/intermediates/transforms/preDex/release/36.jar" />
     </item>
     <item
         is-multidex="false"
@@ -139,7 +109,7 @@
         optimize="true"
         revision="26.0.3"
         sha1="7efef32744ca4a436492d5cf28c08698cc2af256">
-        <dex dex="/home/sid/Projects/The-Second-R/thesecondr/android/app/build/intermediates/transforms/preDex/release/27.jar" />
+        <dex dex="/home/sid/Projects/The-Second-R/thesecondr/android/app/build/intermediates/transforms/preDex/release/30.jar" />
     </item>
     <item
         is-multidex="false"
@@ -149,17 +119,7 @@
         optimize="true"
         revision="26.0.3"
         sha1="40392f30a601db5675cdf18192aab013d6fee6ec">
-        <dex dex="/home/sid/Projects/The-Second-R/thesecondr/android/app/build/intermediates/transforms/preDex/release/9.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/sid/.gradle/caches/modules-2/files-2.1/android.arch.lifecycle/common/1.0.0/e414a4cb28434e25c4f6aa71426eb20cf4874ae9/common-1.0.0.jar"
-        jumboMode="false"
-        min-sdk-version="16"
-        optimize="true"
-        revision="26.0.3"
-        sha1="e414a4cb28434e25c4f6aa71426eb20cf4874ae9">
-        <dex dex="/home/sid/Projects/The-Second-R/thesecondr/android/app/build/intermediates/transforms/preDex/release/52.jar" />
+        <dex dex="/home/sid/Projects/The-Second-R/thesecondr/android/app/build/intermediates/transforms/preDex/release/28.jar" />
     </item>
     <item
         is-multidex="false"
@@ -173,16 +133,6 @@
     </item>
     <item
         is-multidex="false"
-        jar="/home/sid/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/29c665722919d52a0e7b26a27003d0f0/jars/classes.jar"
-        jumboMode="false"
-        min-sdk-version="16"
-        optimize="true"
-        revision="26.0.3"
-        sha1="2442771a5590dd4eb4bce00c2e9dca9e22e4c963">
-        <dex dex="/home/sid/Projects/The-Second-R/thesecondr/android/app/build/intermediates/transforms/preDex/release/31.jar" />
-    </item>
-    <item
-        is-multidex="false"
         jar="/home/sid/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.1.0.aar/5ceb0d3143889cfd2a75d176302bb7be/jars/classes.jar"
         jumboMode="false"
         min-sdk-version="16"
@@ -190,6 +140,216 @@
         revision="26.0.3"
         sha1="233f60a165ae622c8b36731502ebbda0f65e1930">
         <dex dex="/home/sid/Projects/The-Second-R/thesecondr/android/app/build/intermediates/transforms/preDex/release/30.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/sid/.gradle/caches/modules-2/files-2.1/com.android.support/support-annotations/26.1.0/814258103cf26a15fcc26ecce35f5b7d24b73f8/support-annotations-26.1.0.jar"
+        jumboMode="false"
+        min-sdk-version="16"
+        optimize="true"
+        revision="26.0.3"
+        sha1="0814258103cf26a15fcc26ecce35f5b7d24b73f8">
+        <dex dex="/home/sid/Projects/The-Second-R/thesecondr/android/app/build/intermediates/transforms/preDex/release/35.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/sid/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/b063d3a074d6527c7b09f9a0da09472f/jars/classes.jar"
+        jumboMode="false"
+        min-sdk-version="16"
+        optimize="true"
+        revision="26.0.3"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="/home/sid/Projects/The-Second-R/thesecondr/android/app/build/intermediates/transforms/preDex/release/24.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/sid/.gradle/caches/modules-2/files-2.1/android.arch.core/common/1.0.0/a2d487452376193fc8c103dd2b9bd5f2b1b44563/common-1.0.0.jar"
+        jumboMode="false"
+        min-sdk-version="16"
+        optimize="true"
+        revision="26.0.3"
+        sha1="a2d487452376193fc8c103dd2b9bd5f2b1b44563">
+        <dex dex="/home/sid/Projects/The-Second-R/thesecondr/android/app/build/intermediates/transforms/preDex/release/58.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/sid/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.2.aar/59b6036b0dd837b3f12a61e80f13ffc2/jars/classes.jar"
+        jumboMode="false"
+        min-sdk-version="16"
+        optimize="true"
+        revision="26.0.3"
+        sha1="182370a4a0bba7903c6ff2cb7b6ac21ca4a4bf89">
+        <dex dex="/home/sid/Projects/The-Second-R/thesecondr/android/app/build/intermediates/transforms/preDex/release/7.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/sid/.gradle/caches/transforms-1/files-1.1/textlayoutbuilder-1.0.0.aar/ea2f23101219b6b9eb964e1503d8e2f1/jars/classes.jar"
+        jumboMode="false"
+        min-sdk-version="16"
+        optimize="true"
+        revision="26.0.3"
+        sha1="f90b593491e4044903f0bbf68dc3fa2790b151b9">
+        <dex dex="/home/sid/Projects/The-Second-R/thesecondr/android/app/build/intermediates/transforms/preDex/release/37.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/sid/.gradle/caches/transforms-1/files-1.1/firebase-storage-common-16.0.1.aar/3f4f1f1d179c81552e7e8c3a53ad6563/jars/classes.jar"
+        jumboMode="false"
+        min-sdk-version="16"
+        optimize="true"
+        revision="26.0.3"
+        sha1="102cfb77c8b8e17db5e8171cc8222750f7c6edc0">
+        <dex dex="/home/sid/Projects/The-Second-R/thesecondr/android/app/build/intermediates/transforms/preDex/release/19.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/sid/Projects/The-Second-R/thesecondr/node_modules/react-native-vector-icons/android/build/intermediates/intermediate-jars/release/classes.jar"
+        jumboMode="false"
+        min-sdk-version="16"
+        optimize="true"
+        revision="26.0.3"
+        sha1="279750fed3c920d06351dbf32889c1b48203c7ad">
+        <dex dex="/home/sid/Projects/The-Second-R/thesecondr/android/app/build/intermediates/transforms/preDex/release/59.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/sid/.gradle/caches/transforms-1/files-1.1/play-services-base-15.0.1.aar/5da76954970c15f9a1051bcf8051a7f1/jars/classes.jar"
+        jumboMode="false"
+        min-sdk-version="16"
+        optimize="true"
+        revision="26.0.3"
+        sha1="8d813c05361147f6f515f749df19223cd6256314">
+        <dex dex="/home/sid/Projects/The-Second-R/thesecondr/android/app/build/intermediates/transforms/preDex/release/16.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/sid/.gradle/caches/transforms-1/files-1.1/firebase-iid-interop-16.0.0.aar/70f06a471219c98f64f824a2083f6e36/jars/classes.jar"
+        jumboMode="false"
+        min-sdk-version="16"
+        optimize="true"
+        revision="26.0.3"
+        sha1="2a69972573cb7e5cc6b8652bacf981e82b68ff71">
+        <dex dex="/home/sid/Projects/The-Second-R/thesecondr/android/app/build/intermediates/transforms/preDex/release/15.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/sid/.gradle/caches/transforms-1/files-1.1/firebase-analytics-16.0.1.aar/459f7d3ce0cece3ccc406d0a5ed38578/jars/classes.jar"
+        jumboMode="false"
+        min-sdk-version="16"
+        optimize="true"
+        revision="26.0.3"
+        sha1="637393020f93f1744e2e325a7da6706b81697efe">
+        <dex dex="/home/sid/Projects/The-Second-R/thesecondr/android/app/build/intermediates/transforms/preDex/release/14.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/sid/.gradle/caches/modules-2/files-2.1/com.github.bumptech.glide/annotations/4.7.1/796c0bf0a61141278c4bc32de2b92e6eb7fa8b1a/annotations-4.7.1.jar"
+        jumboMode="false"
+        min-sdk-version="16"
+        optimize="true"
+        revision="26.0.3"
+        sha1="796c0bf0a61141278c4bc32de2b92e6eb7fa8b1a">
+        <dex dex="/home/sid/Projects/The-Second-R/thesecondr/android/app/build/intermediates/transforms/preDex/release/27.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/sid/.gradle/caches/transforms-1/files-1.1/firebase-analytics-impl-16.1.1.aar/496d90960169425a15b0476d94411a7c/jars/classes.jar"
+        jumboMode="false"
+        min-sdk-version="16"
+        optimize="true"
+        revision="26.0.3"
+        sha1="d5c9872f97093326e643dbda4ffea750ecd69ea5">
+        <dex dex="/home/sid/Projects/The-Second-R/thesecondr/android/app/build/intermediates/transforms/preDex/release/15.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/sid/.gradle/caches/modules-2/files-2.1/com.google.code.findbugs/jsr305/3.0.0/5871fb60dc68d67da54a663c3fd636a10a532948/jsr305-3.0.0.jar"
+        jumboMode="false"
+        min-sdk-version="16"
+        optimize="true"
+        revision="26.0.3"
+        sha1="5871fb60dc68d67da54a663c3fd636a10a532948">
+        <dex dex="/home/sid/Projects/The-Second-R/thesecondr/android/app/build/intermediates/transforms/preDex/release/44.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/sid/.gradle/caches/transforms-1/files-1.1/react-native-0.56.0.aar/21172696b061d9aa26034aacd9514b16/jars/libs/infer-annotations-4.0.jar"
+        jumboMode="false"
+        min-sdk-version="16"
+        optimize="true"
+        revision="26.0.3"
+        sha1="9809e90be788acdb479b2b44e2112f3295a03068">
+        <dex dex="/home/sid/Projects/The-Second-R/thesecondr/android/app/build/intermediates/transforms/preDex/release/2.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/sid/.gradle/caches/transforms-1/files-1.1/soloader-0.3.0.aar/81c42056bdad62631ffe2ccff3bb8c74/jars/classes.jar"
+        jumboMode="false"
+        min-sdk-version="16"
+        optimize="true"
+        revision="26.0.3"
+        sha1="9803a14716e9f462afb5742811f3456c39f3be3a">
+        <dex dex="/home/sid/Projects/The-Second-R/thesecondr/android/app/build/intermediates/transforms/preDex/release/43.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/sid/.gradle/caches/transforms-1/files-1.1/play-services-auth-api-phone-15.0.1.aar/4bdd9e77f2ac144646e791f29fb98ba0/jars/classes.jar"
+        jumboMode="false"
+        min-sdk-version="16"
+        optimize="true"
+        revision="26.0.3"
+        sha1="7c9f3ed917984af2e50b56f65f0398c9e5756035">
+        <dex dex="/home/sid/Projects/The-Second-R/thesecondr/android/app/build/intermediates/transforms/preDex/release/11.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/sid/.gradle/caches/transforms-1/files-1.1/gifdecoder-4.7.1.aar/c2ae3233ab927edc54b404bbddd915f0/jars/classes.jar"
+        jumboMode="false"
+        min-sdk-version="16"
+        optimize="true"
+        revision="26.0.3"
+        sha1="221de83c08ed1502286513b4d472d256341e8839">
+        <dex dex="/home/sid/Projects/The-Second-R/thesecondr/android/app/build/intermediates/transforms/preDex/release/50.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/sid/.gradle/caches/transforms-1/files-1.1/play-services-measurement-base-16.0.0.aar/ebe0f6c994f3fd0528704c64b7e7a2f5/jars/classes.jar"
+        jumboMode="false"
+        min-sdk-version="16"
+        optimize="true"
+        revision="26.0.3"
+        sha1="6ff520d5283b90ff4bb3db6b82298c3f1acd220b">
+        <dex dex="/home/sid/Projects/The-Second-R/thesecondr/android/app/build/intermediates/transforms/preDex/release/54.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/sid/.gradle/caches/transforms-1/files-1.1/imagepipeline-okhttp3-1.9.0.aar/4e1de5f5b2810a32f1a188ba6371d643/jars/classes.jar"
+        jumboMode="false"
+        min-sdk-version="16"
+        optimize="true"
+        revision="26.0.3"
+        sha1="dc6c0959ecc7b21932675183573b2bcecf2687b9">
+        <dex dex="/home/sid/Projects/The-Second-R/thesecondr/android/app/build/intermediates/transforms/preDex/release/39.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/sid/.gradle/caches/modules-2/files-2.1/android.arch.lifecycle/common/1.0.0/e414a4cb28434e25c4f6aa71426eb20cf4874ae9/common-1.0.0.jar"
+        jumboMode="false"
+        min-sdk-version="16"
+        optimize="true"
+        revision="26.0.3"
+        sha1="e414a4cb28434e25c4f6aa71426eb20cf4874ae9">
+        <dex dex="/home/sid/Projects/The-Second-R/thesecondr/android/app/build/intermediates/transforms/preDex/release/57.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/sid/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/29c665722919d52a0e7b26a27003d0f0/jars/classes.jar"
+        jumboMode="false"
+        min-sdk-version="16"
+        optimize="true"
+        revision="26.0.3"
+        sha1="2442771a5590dd4eb4bce00c2e9dca9e22e4c963">
+        <dex dex="/home/sid/Projects/The-Second-R/thesecondr/android/app/build/intermediates/transforms/preDex/release/34.jar" />
     </item>
     <item
         is-multidex="false"
@@ -210,16 +370,6 @@
         revision="26.0.3"
         sha1="ddcf9c81c108e18f458eb2b9f6a6b7b35fd09fb8">
         <dex dex="/home/sid/Projects/The-Second-R/thesecondr/android/app/build/intermediates/transforms/preDex/release/4.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/sid/.gradle/caches/modules-2/files-2.1/com.android.support/support-annotations/26.1.0/814258103cf26a15fcc26ecce35f5b7d24b73f8/support-annotations-26.1.0.jar"
-        jumboMode="false"
-        min-sdk-version="16"
-        optimize="true"
-        revision="26.0.3"
-        sha1="0814258103cf26a15fcc26ecce35f5b7d24b73f8">
-        <dex dex="/home/sid/Projects/The-Second-R/thesecondr/android/app/build/intermediates/transforms/preDex/release/32.jar" />
     </item>
     <item
         is-multidex="false"
@@ -263,12 +413,12 @@
     </item>
     <item
         is-multidex="false"
-        jar="/home/sid/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/b063d3a074d6527c7b09f9a0da09472f/jars/classes.jar"
+        jar="/home/sid/.gradle/caches/transforms-1/files-1.1/glide-4.7.1.aar/1e1e184c4f8058d2229e61d49450333c/jars/classes.jar"
         jumboMode="false"
         min-sdk-version="16"
         optimize="true"
         revision="26.0.3"
-        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        sha1="6980ea27453d2bb99d8a484d359442ec6b1fe28c">
         <dex dex="/home/sid/Projects/The-Second-R/thesecondr/android/app/build/intermediates/transforms/preDex/release/26.jar" />
     </item>
     <item
@@ -313,16 +463,6 @@
     </item>
     <item
         is-multidex="false"
-        jar="/home/sid/.gradle/caches/modules-2/files-2.1/android.arch.core/common/1.0.0/a2d487452376193fc8c103dd2b9bd5f2b1b44563/common-1.0.0.jar"
-        jumboMode="false"
-        min-sdk-version="16"
-        optimize="true"
-        revision="26.0.3"
-        sha1="a2d487452376193fc8c103dd2b9bd5f2b1b44563">
-        <dex dex="/home/sid/Projects/The-Second-R/thesecondr/android/app/build/intermediates/transforms/preDex/release/53.jar" />
-    </item>
-    <item
-        is-multidex="false"
         jar="/home/sid/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-26.1.0.aar/e8164f41d4d1a5935103252b5e8fce60/jars/classes.jar"
         jumboMode="false"
         min-sdk-version="16"
@@ -333,23 +473,13 @@
     </item>
     <item
         is-multidex="false"
-        jar="/home/sid/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.2.aar/59b6036b0dd837b3f12a61e80f13ffc2/jars/classes.jar"
+        jar="/home/sid/.gradle/caches/modules-2/files-2.1/com.github.bumptech.glide/disklrucache/4.7.1/21e6054c134c7f5c435ab7635984f39c5375083e/disklrucache-4.7.1.jar"
         jumboMode="false"
         min-sdk-version="16"
         optimize="true"
         revision="26.0.3"
-        sha1="182370a4a0bba7903c6ff2cb7b6ac21ca4a4bf89">
-        <dex dex="/home/sid/Projects/The-Second-R/thesecondr/android/app/build/intermediates/transforms/preDex/release/7.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/sid/.gradle/caches/transforms-1/files-1.1/textlayoutbuilder-1.0.0.aar/ea2f23101219b6b9eb964e1503d8e2f1/jars/classes.jar"
-        jumboMode="false"
-        min-sdk-version="16"
-        optimize="true"
-        revision="26.0.3"
-        sha1="f90b593491e4044903f0bbf68dc3fa2790b151b9">
-        <dex dex="/home/sid/Projects/The-Second-R/thesecondr/android/app/build/intermediates/transforms/preDex/release/34.jar" />
+        sha1="21e6054c134c7f5c435ab7635984f39c5375083e">
+        <dex dex="/home/sid/Projects/The-Second-R/thesecondr/android/app/build/intermediates/transforms/preDex/release/51.jar" />
     </item>
     <item
         is-multidex="false"
@@ -359,7 +489,7 @@
         optimize="true"
         revision="26.0.3"
         sha1="1c9837ec75b2273699379c2ba0ae63d669b4f08c">
-        <dex dex="/home/sid/Projects/The-Second-R/thesecondr/android/app/build/intermediates/transforms/preDex/release/38.jar" />
+        <dex dex="/home/sid/Projects/The-Second-R/thesecondr/android/app/build/intermediates/transforms/preDex/release/41.jar" />
     </item>
     <item
         is-multidex="false"
@@ -373,53 +503,13 @@
     </item>
     <item
         is-multidex="false"
-        jar="/home/sid/.gradle/caches/transforms-1/files-1.1/firebase-storage-common-16.0.1.aar/3f4f1f1d179c81552e7e8c3a53ad6563/jars/classes.jar"
-        jumboMode="false"
-        min-sdk-version="16"
-        optimize="true"
-        revision="26.0.3"
-        sha1="102cfb77c8b8e17db5e8171cc8222750f7c6edc0">
-        <dex dex="/home/sid/Projects/The-Second-R/thesecondr/android/app/build/intermediates/transforms/preDex/release/21.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/sid/Projects/The-Second-R/thesecondr/node_modules/react-native-vector-icons/android/build/intermediates/intermediate-jars/release/classes.jar"
-        jumboMode="false"
-        min-sdk-version="16"
-        optimize="true"
-        revision="26.0.3"
-        sha1="279750fed3c920d06351dbf32889c1b48203c7ad">
-        <dex dex="/home/sid/Projects/The-Second-R/thesecondr/android/app/build/intermediates/transforms/preDex/release/54.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/sid/.gradle/caches/transforms-1/files-1.1/play-services-base-15.0.1.aar/5da76954970c15f9a1051bcf8051a7f1/jars/classes.jar"
-        jumboMode="false"
-        min-sdk-version="16"
-        optimize="true"
-        revision="26.0.3"
-        sha1="8d813c05361147f6f515f749df19223cd6256314">
-        <dex dex="/home/sid/Projects/The-Second-R/thesecondr/android/app/build/intermediates/transforms/preDex/release/18.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/sid/.gradle/caches/transforms-1/files-1.1/firebase-iid-interop-16.0.0.aar/70f06a471219c98f64f824a2083f6e36/jars/classes.jar"
-        jumboMode="false"
-        min-sdk-version="16"
-        optimize="true"
-        revision="26.0.3"
-        sha1="2a69972573cb7e5cc6b8652bacf981e82b68ff71">
-        <dex dex="/home/sid/Projects/The-Second-R/thesecondr/android/app/build/intermediates/transforms/preDex/release/17.jar" />
-    </item>
-    <item
-        is-multidex="false"
         jar="/home/sid/.gradle/caches/modules-2/files-2.1/com.android.support.constraint/constraint-layout-solver/1.1.2/bfc967828daffc35ba01c9ee204d98b664930a0f/constraint-layout-solver-1.1.2.jar"
         jumboMode="false"
         min-sdk-version="16"
         optimize="true"
         revision="26.0.3"
         sha1="bfc967828daffc35ba01c9ee204d98b664930a0f">
-        <dex dex="/home/sid/Projects/The-Second-R/thesecondr/android/app/build/intermediates/transforms/preDex/release/46.jar" />
+        <dex dex="/home/sid/Projects/The-Second-R/thesecondr/android/app/build/intermediates/transforms/preDex/release/49.jar" />
     </item>
     <item
         is-multidex="false"
@@ -433,16 +523,6 @@
     </item>
     <item
         is-multidex="false"
-        jar="/home/sid/.gradle/caches/transforms-1/files-1.1/firebase-analytics-16.0.1.aar/459f7d3ce0cece3ccc406d0a5ed38578/jars/classes.jar"
-        jumboMode="false"
-        min-sdk-version="16"
-        optimize="true"
-        revision="26.0.3"
-        sha1="637393020f93f1744e2e325a7da6706b81697efe">
-        <dex dex="/home/sid/Projects/The-Second-R/thesecondr/android/app/build/intermediates/transforms/preDex/release/14.jar" />
-    </item>
-    <item
-        is-multidex="false"
         jar="/home/sid/.gradle/caches/transforms-1/files-1.1/play-services-stats-15.0.1.aar/366f6bb6a02f1f6f4b684f2ebd22d906/jars/classes.jar"
         jumboMode="false"
         min-sdk-version="16"
@@ -450,16 +530,6 @@
         revision="26.0.3"
         sha1="c1e9d140d3260619ce2fa991d30b14b531d61dec">
         <dex dex="/home/sid/Projects/The-Second-R/thesecondr/android/app/build/intermediates/transforms/preDex/release/22.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/sid/.gradle/caches/transforms-1/files-1.1/firebase-analytics-impl-16.1.1.aar/496d90960169425a15b0476d94411a7c/jars/classes.jar"
-        jumboMode="false"
-        min-sdk-version="16"
-        optimize="true"
-        revision="26.0.3"
-        sha1="d5c9872f97093326e643dbda4ffea750ecd69ea5">
-        <dex dex="/home/sid/Projects/The-Second-R/thesecondr/android/app/build/intermediates/transforms/preDex/release/15.jar" />
     </item>
     <item
         is-multidex="false"
@@ -473,33 +543,23 @@
     </item>
     <item
         is-multidex="false"
-        jar="/home/sid/.gradle/caches/modules-2/files-2.1/com.google.code.findbugs/jsr305/3.0.0/5871fb60dc68d67da54a663c3fd636a10a532948/jsr305-3.0.0.jar"
-        jumboMode="false"
-        min-sdk-version="16"
-        optimize="true"
-        revision="26.0.3"
-        sha1="5871fb60dc68d67da54a663c3fd636a10a532948">
-        <dex dex="/home/sid/Projects/The-Second-R/thesecondr/android/app/build/intermediates/transforms/preDex/release/41.jar" />
-    </item>
-    <item
-        is-multidex="false"
         jar="/home/sid/.gradle/caches/transforms-1/files-1.1/firebase-common-16.0.0.aar/6841f9c150a61622f9a7386633fc1349/jars/classes.jar"
         jumboMode="false"
         min-sdk-version="16"
         optimize="true"
         revision="26.0.3"
         sha1="0fbef528093d3d19b229116b683bd2a66d4aeae1">
-        <dex dex="/home/sid/Projects/The-Second-R/thesecondr/android/app/build/intermediates/transforms/preDex/release/19.jar" />
+        <dex dex="/home/sid/Projects/The-Second-R/thesecondr/android/app/build/intermediates/transforms/preDex/release/17.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="/home/sid/.gradle/caches/transforms-1/files-1.1/react-native-0.56.0.aar/21172696b061d9aa26034aacd9514b16/jars/libs/infer-annotations-4.0.jar"
+        jar="/home/sid/Projects/The-Second-R/thesecondr/node_modules/react-native-fast-image/android/build/intermediates/intermediate-jars/release/classes.jar"
         jumboMode="false"
         min-sdk-version="16"
         optimize="true"
         revision="26.0.3"
-        sha1="9809e90be788acdb479b2b44e2112f3295a03068">
-        <dex dex="/home/sid/Projects/The-Second-R/thesecondr/android/app/build/intermediates/transforms/preDex/release/2.jar" />
+        sha1="81ebc9aa5fd377b5a8093674cf1e80f10e0f468a">
+        <dex dex="/home/sid/Projects/The-Second-R/thesecondr/android/app/build/intermediates/transforms/preDex/release/60.jar" />
     </item>
     <item
         is-multidex="false"
@@ -519,7 +579,7 @@
         optimize="true"
         revision="26.0.3"
         sha1="4d4d98a0428b2e620e6b4a228ef9f7cb2f0debd2">
-        <dex dex="/home/sid/Projects/The-Second-R/thesecondr/android/app/build/intermediates/transforms/preDex/release/20.jar" />
+        <dex dex="/home/sid/Projects/The-Second-R/thesecondr/android/app/build/intermediates/transforms/preDex/release/18.jar" />
     </item>
 
 </items>

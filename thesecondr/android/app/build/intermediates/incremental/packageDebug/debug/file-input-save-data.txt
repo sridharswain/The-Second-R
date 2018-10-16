@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Tue Sep 04 18:01:10 IST 2018
+#Tue Oct 16 11:54:08 IST 2018
 5.base=/home/sid/Projects/The-Second-R/thesecondr/android/app/build/intermediates/transforms/stripDebugSymbol/debug/0
 42.base=/home/sid/Projects/The-Second-R/thesecondr/android/app/build/intermediates/transforms/stripDebugSymbol/debug/0
 22.path=lib/x86/libglog_init.so

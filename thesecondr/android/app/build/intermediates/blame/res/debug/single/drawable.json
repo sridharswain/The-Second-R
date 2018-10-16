@@ -80,12 +80,12 @@
         "source": "/home/sid/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/20f351e1910bcc2ff007397869452ebc/res/drawable/abc_seekbar_tick_mark_material.xml"
     },
     {
-        "merged": "/home/sid/Projects/The-Second-R/thesecondr/android/app/build/intermediates/res/merged/debug/drawable/abc_dialog_material_background.xml",
-        "source": "/home/sid/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/20f351e1910bcc2ff007397869452ebc/res/drawable/abc_dialog_material_background.xml"
-    },
-    {
         "merged": "/home/sid/Projects/The-Second-R/thesecondr/android/app/build/intermediates/res/merged/debug/drawable/abc_btn_colored_material.xml",
         "source": "/home/sid/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/20f351e1910bcc2ff007397869452ebc/res/drawable/abc_btn_colored_material.xml"
+    },
+    {
+        "merged": "/home/sid/Projects/The-Second-R/thesecondr/android/app/build/intermediates/res/merged/debug/drawable/abc_dialog_material_background.xml",
+        "source": "/home/sid/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/20f351e1910bcc2ff007397869452ebc/res/drawable/abc_dialog_material_background.xml"
     },
     {
         "merged": "/home/sid/Projects/The-Second-R/thesecondr/android/app/build/intermediates/res/merged/debug/drawable/common_google_signin_btn_text_dark.xml",

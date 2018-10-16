@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "/home/sid/Projects/The-Second-R/thesecondr/android/app/build/intermediates/res/merged/release/xml/file_paths.xml",
+        "source": "/home/sid/Projects/The-Second-R/thesecondr/android/app/src/main/res/xml/file_paths.xml"
+    },
+    {
+        "merged": "/home/sid/Projects/The-Second-R/thesecondr/android/app/build/intermediates/res/merged/release/xml/preferences.xml",
+        "source": "/home/sid/.gradle/caches/transforms-1/files-1.1/react-native-0.56.0.aar/21172696b061d9aa26034aacd9514b16/res/xml/preferences.xml"
+    }
+]
