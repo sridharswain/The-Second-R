@@ -6,6 +6,7 @@ const getAds = require('./controllers/getAds');
 const getUserById = require('./controllers/getUserById');
 const googleSignIn = require('./controllers/googleSignin');
 const deleteOrder = require('./controllers/deleteOrder');
+const updateUserById = require('./controllers/updateUserById');
 const reply = require('./reply');
 
 module.exports = function(app,db){
@@ -32,9 +33,10 @@ module.exports = function(app,db){
         });
     });
 
-    //ADD NEW ORDER
-    app.post('/addOrder',(req,res) => {
-        res.send("Hello World");
+    app.post('/updateUserById', (req,res) => {
+        updateUserById(req.body,(err, result) => {
+            res.json(reply(err,result));
+        });
     });
 
     //ADD NEW AD
